@@ -91,7 +91,7 @@ const Navbar = () => {
                                 </span>
                             </div>
                             <span className="text-white font-semibold text-lg">
-                                Nicolás Pelecano
+                                Nicolás Barra
                             </span>
                         </motion.div>
 

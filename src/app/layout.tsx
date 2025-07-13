@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     title: "Nicolás M. Barra Pelecano - Portfolio",
     description:
         "Portfolio profesional de Nicolás M. Barra Pelecano - Desarrollador Full Stack",
+    icons: {
+        icon: "/favicon.svg",
+    },
 };
 
 export default function RootLayout({

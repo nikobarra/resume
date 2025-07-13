@@ -10,6 +10,7 @@ import {
     Eye,
 } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import cvData from "../cvjson.json";
 
 const Certificaciones = () => {
@@ -253,36 +254,102 @@ const Certificaciones = () => {
                                                 )}
                                             </div>
 
-                                            {/* Modal de imagen al hover */}
-                                            {hoveredCert ===
-                                                certificacion.nombre &&
-                                                hasImage && (
-                                                    <div className="absolute top-0 left-0 z-50 bg-neutral-800 p-3 rounded-lg shadow-2xl border border-neutral-700 max-w-xs">
-                                                        <div className="relative">
-                                                            <img
-                                                                src={imagePath}
-                                                                alt={`Certificado: ${certificacion.nombre}`}
-                                                                className="w-full h-auto rounded-lg object-cover"
-                                                                onError={(
-                                                                    e
-                                                                ) => {
-                                                                    console.error(
-                                                                        `Error loading image: ${imagePath}`
-                                                                    );
-                                                                    e.currentTarget.style.display =
-                                                                        "none";
+                                            {/* Modal de imagen al hover con efecto de despegue */}
+                                            <AnimatePresence>
+                                                {hoveredCert ===
+                                                    certificacion.nombre &&
+                                                    hasImage && (
+                                                        <motion.div
+                                                            initial={{
+                                                                opacity: 0,
+                                                                scale: 0.8,
+                                                                y: 20,
+                                                                rotateX: -15,
+                                                                z: 0,
+                                                            }}
+                                                            animate={{
+                                                                opacity: 1,
+                                                                scale: 1,
+                                                                y: -20,
+                                                                rotateX: 0,
+                                                                z: 50,
+                                                            }}
+                                                            exit={{
+                                                                opacity: 0,
+                                                                scale: 0.8,
+                                                                y: 20,
+                                                                rotateX: -15,
+                                                                z: 0,
+                                                            }}
+                                                            transition={{
+                                                                duration: 0.4,
+                                                                ease: "easeOut",
+                                                                type: "spring",
+                                                                stiffness: 300,
+                                                                damping: 25,
+                                                            }}
+                                                            className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
+                                                        >
+                                                            <motion.div
+                                                                className="bg-neutral-800 p-4 rounded-xl shadow-2xl border border-neutral-700 max-w-sm mx-4 pointer-events-auto"
+                                                                style={{
+                                                                    boxShadow:
+                                                                        "0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 165, 0, 0.1)",
                                                                 }}
-                                                            />
-                                                            <div className="mt-2 text-center">
-                                                                <p className="text-white text-xs font-medium leading-tight">
-                                                                    {
-                                                                        certificacion.nombre
-                                                                    }
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                )}
+                                                            >
+                                                                <div className="relative">
+                                                                    <motion.img
+                                                                        src={
+                                                                            imagePath
+                                                                        }
+                                                                        alt={`Certificado: ${certificacion.nombre}`}
+                                                                        className="w-full h-auto rounded-lg object-cover"
+                                                                        onError={(
+                                                                            e
+                                                                        ) => {
+                                                                            console.error(
+                                                                                `Error loading image: ${imagePath}`
+                                                                            );
+                                                                            e.currentTarget.style.display =
+                                                                                "none";
+                                                                        }}
+                                                                        initial={{
+                                                                            filter: "blur(4px)",
+                                                                        }}
+                                                                        animate={{
+                                                                            filter: "blur(0px)",
+                                                                        }}
+                                                                        transition={{
+                                                                            duration: 0.3,
+                                                                            delay: 0.1,
+                                                                        }}
+                                                                    />
+                                                                    <motion.div
+                                                                        className="mt-3 text-center"
+                                                                        initial={{
+                                                                            opacity: 0,
+                                                                            y: 10,
+                                                                        }}
+                                                                        animate={{
+                                                                            opacity: 1,
+                                                                            y: 0,
+                                                                        }}
+                                                                        transition={{
+                                                                            duration: 0.3,
+                                                                            delay: 0.2,
+                                                                        }}
+                                                                    >
+                                                                        <p className="text-white text-sm font-medium leading-tight">
+                                                                            {
+                                                                                certificacion.nombre
+                                                                            }
+                                                                        </p>
+                                                                    </motion.div>
+                                                                </div>
+                                                            </motion.div>
+                                                        </motion.div>
+                                                    )}
+                                            </AnimatePresence>
                                         </div>
                                     );
                                 })}

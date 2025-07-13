@@ -3,12 +3,11 @@
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslations } from "../hooks/useTranslations";
-import LanguageSwitch from "./LanguageSwitch";
 import { useLanguage } from "../contexts/LanguageContext";
 import { getPersonalInfo } from "../utils/cvHelpers";
 
 const Header = () => {
-    const { t, cvData } = useTranslations();
+    const { cvData } = useTranslations();
     const { language } = useLanguage();
 
     const personalInfo = getPersonalInfo(cvData, language);
@@ -28,40 +27,35 @@ const Header = () => {
                         />
                         <div className="text-center lg:text-left">
                             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-2">
-                                {t.header.title}
+                                {personalInfo.name}
                             </h1>
                             <p className="text-xl text-orange-400 mb-4">
-                                {t.header.subtitle}
+                                {language === "es"
+                                    ? "Futuro Ingeniero en Datos e IA"
+                                    : "Future Data and AI Engineer"}
                             </p>
                         </div>
                     </div>
 
-                    {/* Información de contacto y switch de idioma */}
-                    <div className="flex flex-col gap-4">
-                        <div className="flex flex-col gap-3 text-sm">
-                            <a
-                                href={`tel:${personalInfo.phone}`}
-                                className="flex items-center gap-2 text-neutral-300 hover:text-orange-400 transition-colors"
-                            >
-                                <Phone size={16} />
-                                {personalInfo.phone}
-                            </a>
-                            <a
-                                href={`mailto:${personalInfo.email}`}
-                                className="flex items-center gap-2 text-neutral-300 hover:text-orange-400 transition-colors"
-                            >
-                                <Mail size={16} />
-                                {personalInfo.email}
-                            </a>
-                            <div className="flex items-center gap-2 text-neutral-300">
-                                <MapPin size={16} />
-                                {personalInfo.location}
-                            </div>
-                        </div>
-
-                        {/* Language Switch */}
-                        <div className="flex justify-center lg:justify-end">
-                            <LanguageSwitch />
+                    {/* Información de contacto */}
+                    <div className="flex flex-col gap-3 text-sm">
+                        <a
+                            href={`tel:${personalInfo.phone}`}
+                            className="flex items-center gap-2 text-neutral-300 hover:text-orange-400 transition-colors"
+                        >
+                            <Phone size={16} />
+                            {personalInfo.phone}
+                        </a>
+                        <a
+                            href={`mailto:${personalInfo.email}`}
+                            className="flex items-center gap-2 text-neutral-300 hover:text-orange-400 transition-colors"
+                        >
+                            <Mail size={16} />
+                            {personalInfo.email}
+                        </a>
+                        <div className="flex items-center gap-2 text-neutral-300">
+                            <MapPin size={16} />
+                            {personalInfo.location}
                         </div>
                     </div>
                 </div>

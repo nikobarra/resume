@@ -1,0 +1,204 @@
+{
+    "informacion_personal": {
+        "nombre_completo": "Nicolás Matías Barra Pelecano",
+        "telefono": "+54 2266-440616",
+        "correo_electronico": "nicolasbarrapelecano@gmail.com",
+        "ubicacion": "Mar del Plata, Buenos Aires"
+    },
+    "perfil_profesional": "Soy un entusiasta de la tecnología con una fuerte orientación hacia el análisis y la ingeniería de datos, actualmente cursando la Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial. Poseo una sólida base en Python y SQL, con experiencia en programación y desarrollo de proyectos. Busco mi primera oportunidad laboral en el sector IT como Ingeniero de Datos o Analista de Datos, motivado por aprender, crecer profesionalmente y aplicar mis conocimientos en un entorno de innovación y gestión de datos.",
+    "educacion": [
+        {
+            "titulo": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
+            "institucion": "ISFT N° 204, Mar del Plata",
+            "periodo": "Desde marzo 2025 (Primer año en curso)",
+            "estado": "Todas las materias cursadas hasta el momento han sido promocionadas."
+        }
+    ],
+    "certificaciones_relevantes": [
+        {
+            "nombre": "Scrum Foundation",
+            "otorgado_por": "CertiProf",
+            "anio": 2023
+        },
+        {
+            "nombre": "Python Essentials 1",
+            "otorgado_por": "Cisco Networking Academy",
+            "anio": 2023
+        },
+        {
+            "nombre": "Python 3 - Nivel Inicial",
+            "otorgado_por": "UTN FRBA",
+            "anio": 2023,
+            "horas": 75
+        },
+        {
+            "nombre": "Desarrollo Web",
+            "otorgado_por": "Coderhouse",
+            "anio": 2021,
+            "horas": 38
+        },
+        {
+            "nombre": "Javascript",
+            "otorgado_por": "Coderhouse",
+            "anio": 2021,
+            "horas": 36
+        },
+        {
+            "nombre": "Python",
+            "otorgado_por": "Coderhouse",
+            "anio": 2021,
+            "horas": 52
+        },
+        {
+            "nombre": "Módulo Diseño y Despliegue de IA",
+            "otorgado_por": "UBA IALAB",
+            "anio": 2023,
+            "horas": 200,
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+        },
+        {
+            "nombre": "Módulo Gobernanza de Datos",
+            "otorgado_por": "UBA IALAB",
+            "anio": 2023,
+            "horas": 120,
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+        },
+        {
+            "nombre": "Gobernanza de la Inteligencia Artificial",
+            "otorgado_por": "UBA IALAB",
+            "anio": 2023,
+            "horas": 50,
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+        },
+        {
+            "nombre": "ABC de Programación",
+            "otorgado_por": "UBA IALAB",
+            "anio": 2023,
+            "horas": 20,
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+        },
+        {
+            "nombre": "Programa Básico Multidisciplinario de Formación en Datos e Inteligencia Artificial",
+            "otorgado_por": "UBA IALAB",
+            "anio": 2022,
+            "horas": 50,
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+        },
+        {
+            "nombre": "Programing Essentials in Python",
+            "otorgado_por": "ISPC",
+            "anio": 2023,
+            "horas": 75
+        },
+        {
+            "nombre": "Curso de Fundamentos de Python",
+            "otorgado_por": "Platzi",
+            "anio": 2022,
+            "horas": 17
+        },
+        {
+            "nombre": "Introducción a Bases de Datos y SQL",
+            "otorgado_por": "EducaciónIT",
+            "anio": 2024,
+            "horas": 18
+        },
+        {
+            "nombre": "Python para Análisis de Datos",
+            "otorgado_por": "EducaciónIT",
+            "anio": 2024,
+            "horas": 18
+        },
+        {
+            "nombre": "Introducción a la inteligencia artificial y Prompt Engineering",
+            "otorgado_por": "EducaciónIT",
+            "anio": 2024,
+            "horas": 18
+        },
+        {
+            "nombre": "Introducción al Análisis de datos con Python",
+            "otorgado_por": "Academia Desafío Latam",
+            "anio": 2023
+        },
+        {
+            "nombre": "Curso de base de datos con Python",
+            "otorgado_por": "Código Facilito",
+            "anio": 2024,
+            "horas": "6 horas 21 minutos"
+        },
+        {
+            "nombre": "Herramientas para Formadores",
+            "otorgado_por": "Asociación Gremial de Computación",
+            "anio": 2024
+        },
+        {
+            "nombre": "Argentina Programa 4.0 - 1° Etapa #SeProgramar",
+            "otorgado_por": "Ministerio de Economía, Secretaría de Economía del Conocimiento, INTI",
+            "anio": 2022
+        }
+    ],
+    "experiencia_educacion_desarrollo": [
+        {
+            "puesto": "Profesor de Python (Freelance)",
+            "empresa": "Be Wise, España",
+            "contacto": "Sr. Nahuel Silva Dassis +54 9 11 4974 5485",
+            "periodo": "Abril 2024 - Actualidad",
+            "tareas": [
+                "Clases prácticas de nivel inicial e intermedio.",
+                "Enfoque en resolución de problemas y desarrollo de aplicaciones."
+            ]
+        },
+        {
+            "puesto": "Tutor de Desarrollo",
+            "empresa": "Coderhouse",
+            "contacto": "Franco Di Martino +54 9 280 4390162",
+            "periodo": "Enero 2022 - Septiembre 2024",
+            "tareas": [
+                "Acompañamiento a estudiantes en tecnologías como Python, Django y JavaScript.",
+                "Corrección de ejercicios y guía en proyectos web integrales."
+            ]
+        },
+        {
+            "puesto": "Facilitador de Aprendizaje",
+            "empresa": "Junior Achievement Argentina",
+            "periodo": "Mayo 2022 - Julio 2022",
+            "tareas": [
+                "Capacitación docente a nivel nacional en desarrollo web.",
+                "Implementación de programas educativos orientados a programación."
+            ]
+        }
+    ],
+    "conocimientos_tecnicos": {
+        "lenguajes": ["Python", "JavaScript", "SQL"],
+        "frameworks_y_herramientas": [
+            "Django",
+            "HTML5",
+            "CSS3",
+            "Bootstrap",
+            "Git",
+            "GitHub",
+            "Inteligencia Artificial (IA)",
+            "Prompt Engineering",
+            "Análisis de Datos"
+        ],
+        "metodologias": ["Scrum (Agile)"],
+        "otros": [
+            "Tutoría",
+            "formación técnica",
+            "trabajo remoto",
+            "planificación educativa"
+        ]
+    },
+    "habilidades_blandas": [
+        "Orientación Educativa",
+        "Resolución de Problemas",
+        "Comunicación Efectiva",
+        "Proactividad",
+        "Adaptabilidad",
+        "Trabajo en Equipo",
+        "Planificación y Organización"
+    ],
+    "disponibilidad": {
+        "tipo": "Tiempo completo",
+        "modalidad": "Modalidad remota"
+    }
+}

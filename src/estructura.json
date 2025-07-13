@@ -1,0 +1,172 @@
+{
+    "designSystem": {
+        "colors": {
+            "primary": "#FF5722",
+            "secondary": "#212121",
+            "tertiary": "#424242",
+            "text_light": "#FFFFFF",
+            "text_dark": "#B0BEC5",
+            "accent_highlight": "#FF7043"
+        },
+        "typography": {
+            "font_family_primary": "Inter, sans-serif",
+            "font_family_secondary": "Roboto, sans-serif",
+            "headings": {
+                "h1": {
+                    "font_size": "48px",
+                    "font_weight": "700",
+                    "line_height": "1.2",
+                    "color": "var(--text_light)"
+                },
+                "h2": {
+                    "font_size": "36px",
+                    "font_weight": "600",
+                    "line_height": "1.3",
+                    "color": "var(--text_light)"
+                },
+                "h3": {
+                    "font_size": "24px",
+                    "font_weight": "500",
+                    "line_height": "1.4",
+                    "color": "var(--text_light)"
+                },
+                "h4": {
+                    "font_size": "20px",
+                    "font_weight": "500",
+                    "line_height": "1.5",
+                    "color": "var(--text_light)"
+                }
+            },
+            "body_text": {
+                "default": {
+                    "font_size": "16px",
+                    "font_weight": "400",
+                    "line_height": "1.6",
+                    "color": "var(--text_dark)"
+                },
+                "small": {
+                    "font_size": "14px",
+                    "font_weight": "400",
+                    "line_height": "1.6",
+                    "color": "var(--text_dark)"
+                }
+            },
+            "labels": {
+                "font_size": "12px",
+                "font_weight": "500",
+                "text_transform": "uppercase",
+                "letter_spacing": "1px",
+                "color": "var(--text_dark)"
+            }
+        },
+        "spacing": {
+            "unit": "8px",
+            "small": "16px",
+            "medium": "32px",
+            "large": "64px",
+            "xlarge": "128px"
+        },
+        "borders": {
+            "radius": "4px",
+            "thin": "1px solid var(--tertiary)"
+        },
+        "shadows": {
+            "soft": "0px 4px 8px rgba(0, 0, 0, 0.2)"
+        },
+        "components": {
+            "buttons": {
+                "primary": {
+                    "background_color": "var(--primary)",
+                    "color": "var(--text_light)",
+                    "padding": "12px 24px",
+                    "border_radius": "var(--borders_radius)",
+                    "font_size": "16px",
+                    "font_weight": "600",
+                    "hover_background_color": "var(--accent_highlight)"
+                },
+                "secondary": {
+                    "background_color": "transparent",
+                    "color": "var(--text_light)",
+                    "padding": "12px 24px",
+                    "border": "1px solid var(--primary)",
+                    "border_radius": "var(--borders_radius)",
+                    "font_size": "16px",
+                    "font_weight": "600",
+                    "hover_background_color": "rgba(255, 87, 34, 0.1)"
+                },
+                "icon": {
+                    "background_color": "transparent",
+                    "color": "var(--primary)",
+                    "size": "24px",
+                    "hover_color": "var(--accent_highlight)"
+                }
+            },
+            "cards": {
+                "background_color": "var(--secondary)",
+                "padding": "var(--medium)",
+                "border_radius": "var(--borders_radius)",
+                "shadow": "var(--shadows_soft)"
+            },
+            "navigation": {
+                "background_color": "var(--secondary)",
+                "text_color": "var(--text_light)",
+                "active_color": "var(--primary)",
+                "hover_color": "var(--accent_highlight)"
+            },
+            "progress_bars": {
+                "track_color": "var(--tertiary)",
+                "fill_color": "var(--primary)",
+                "height": "8px",
+                "border_radius": "4px"
+            },
+            "forms": {
+                "input_field": {
+                    "background_color": "var(--tertiary)",
+                    "border": "none",
+                    "color": "var(--text_light)",
+                    "padding": "10px 12px",
+                    "border_radius": "var(--borders_radius)"
+                }
+            }
+        },
+        "layout": {
+            "grid_system": {
+                "columns": 12,
+                "gap": "var(--medium)"
+            },
+            "sections": {
+                "padding_vertical": "var(--large)",
+                "padding_horizontal": "var(--medium)",
+                "background_color_default": "var(--secondary)",
+                "background_color_alternate": "var(--tertiary)"
+            },
+            "header_footer_pattern": {
+                "background_color": "var(--secondary)",
+                "padding": "var(--medium)"
+            },
+            "asymmetrical_backgrounds": {
+                "top_left_accent": {
+                    "color": "var(--primary)",
+                    "shape": "rectangular",
+                    "position": "top-left",
+                    "size": "30% of viewport width"
+                },
+                "right_accent": {
+                    "color": "var(--primary)",
+                    "shape": "rectangular",
+                    "position": "right",
+                    "size": "10% of viewport width"
+                }
+            }
+        },
+        "visual_patterns": {
+            "bold_contrast": "Strong contrast between dark backgrounds and vibrant primary color for accents and key elements.",
+            "minimalist_photography": "Use of high-contrast, often black and white or desaturated, photography against dark backgrounds.",
+            "clean_typography": "Sans-serif fonts with clear hierarchy and good readability.",
+            "iconography_style": "Simple, outline or filled icons that complement the overall minimalist aesthetic.",
+            "progress_indicators": "Linear progress bars with primary color fill for skill representation.",
+            "structured_sections": "Content divided into distinct, well-padded sections with clear headings.",
+            "circular_elements": "Limited use of circular shapes, e.g., for profile images in testimonials."
+        }
+    }
+}

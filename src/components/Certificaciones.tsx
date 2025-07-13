@@ -11,33 +11,38 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import cvData from "../cvjson.json";
+import { useTranslations } from "../hooks/useTranslations";
+import { useLanguage } from "../contexts/LanguageContext";
+import { getCertifications } from "../utils/cvHelpers";
 
 const Certificaciones = () => {
-    const { certificaciones_relevantes } = cvData;
+    const { t, cvData } = useTranslations();
+    const { language } = useLanguage();
+
+    const certifications = getCertifications(cvData, language);
     const [filterYear, setFilterYear] = useState<string>("todos");
     const [hoveredCert, setHoveredCert] = useState<string | null>(null);
 
     // Obtener años únicos para el filtro
-    const years = [
-        ...new Set(certificaciones_relevantes.map((cert) => cert.anio)),
-    ].sort((a, b) => b - a);
+    const years = [...new Set(certifications.map((cert) => cert.year))].sort(
+        (a, b) => b - a
+    );
 
     // Filtrar certificaciones
     const filteredCertifications =
         filterYear === "todos"
-            ? certificaciones_relevantes
-            : certificaciones_relevantes.filter(
-                  (cert) => cert.anio === parseInt(filterYear)
+            ? certifications
+            : certifications.filter(
+                  (cert) => cert.year === parseInt(filterYear)
               );
 
     // Agrupar por año
     const groupedByYear = filteredCertifications.reduce((acc, cert) => {
-        const year = cert.anio;
+        const year = cert.year;
         if (!acc[year]) acc[year] = [];
         acc[year].push(cert);
         return acc;
-    }, {} as Record<number, typeof certificaciones_relevantes>);
+    }, {} as Record<number, typeof certifications>);
 
     const getYearColor = (year: number) => {
         const currentYear = new Date().getFullYear();
@@ -58,6 +63,7 @@ const Certificaciones = () => {
     // Función para obtener la imagen del certificado
     const getCertificateImage = (certName: string) => {
         const imageMap: Record<string, string> = {
+            // Certificados en español
             "Scrum Foundation": "/img/certificates/Scrum Foundation.jpg",
             "Python Essentials 1": "/img/certificates/python essentials 1.jpg",
             "Python 3 - Nivel Inicial":
@@ -96,6 +102,38 @@ const Certificaciones = () => {
                 "/img/certificates/herramientas para formadores.jpg",
             "Argentina Programa 4.0 - 1° Etapa #SeProgramar":
                 "/img/certificates/argentina programa_se programar.jpg",
+
+            // Certificados en inglés
+            "Python 3 - Beginner Level":
+                "/img/certificates/Python 3 - nivel inicial.jpg",
+            "Web Development": "/img/certificates/desarrollo web.png",
+            "AI Design and Deployment Module":
+                "/img/certificates/Modulo diseño y despligue de IA.jpg",
+            "Data Governance Module":
+                "/img/certificates/Modulo gobernanza de datos.jpg",
+            "Artificial Intelligence Governance":
+                "/img/certificates/Gobernanza de la inteligencia artificial.jpg",
+            "Programming ABCs": "/img/certificates/abc de la programacion.jpg",
+            "Basic Multidisciplinary Program in Data and Artificial Intelligence Training":
+                "/img/certificates/programa basico en datos e IA.jpg",
+            "Python Fundamentals Course":
+                "/img/certificates/curso de fundamentos de python.jpg",
+            "Introduction to Databases and SQL":
+                "/img/certificates/introduccion a bases de datos y sql.jpeg",
+            "Python for Data Analysis":
+                "/img/certificates/python para el analisis de datos.jpeg",
+            "Introduction to Artificial Intelligence and Prompt Engineering":
+                "/img/certificates/introduccion a la IA y prompt engineering.jpeg",
+            "Introduction to Data Analysis with Python":
+                "/img/certificates/introduccion al analisis de datos con python.jpg",
+            "Database Course with Python":
+                "/img/certificates/curso de base de datos con python.jpg",
+            "Programming Essentials in Python":
+                "/img/certificates/Programing essentials in python.jpg",
+            "Tools for Trainers":
+                "/img/certificates/herramientas para formadores.jpg",
+            "Argentina Programa 4.0 - 1st Stage #SeProgramar":
+                "/img/certificates/argentina programa_se programar.jpg",
         };
 
         return imageMap[certName] || null;
@@ -105,11 +143,11 @@ const Certificaciones = () => {
         <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">
-                    Certificaciones Relevantes
+                    {t.certificaciones.title}
                 </h2>
                 <p className="text-neutral-400 mb-6">
-                    {certificaciones_relevantes.length} certificaciones
-                    obtenidas
+                    {certifications.length}{" "}
+                    {t.certificaciones.totalCertificates.toLowerCase()}
                 </p>
 
                 {/* Filtro por año */}
@@ -123,7 +161,7 @@ const Certificaciones = () => {
                         }`}
                     >
                         <Filter size={16} className="inline mr-2" />
-                        Todas
+                        {t.certificaciones.allYears}
                     </button>
                     {years.map((year) => (
                         <button
@@ -155,14 +193,15 @@ const Certificaciones = () => {
                                 <Calendar size={24} />
                                 {year}
                                 <span className="text-sm text-neutral-500">
-                                    ({certifications.length} certificaciones)
+                                    ({certifications.length}{" "}
+                                    {t.certificaciones.certifications})
                                 </span>
                             </h3>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {certifications.map((certificacion, index) => {
                                     const imagePath = getCertificateImage(
-                                        certificacion.nombre
+                                        certificacion.name
                                     );
                                     const hasImage = imagePath !== null;
 
@@ -173,7 +212,7 @@ const Certificaciones = () => {
                                             onMouseEnter={() =>
                                                 hasImage &&
                                                 setHoveredCert(
-                                                    certificacion.nombre
+                                                    certificacion.name
                                                 )
                                             }
                                             onMouseLeave={() =>
@@ -184,15 +223,15 @@ const Certificaciones = () => {
                                                 {/* Header con badge de institución */}
                                                 <div className="flex items-start justify-between">
                                                     <h4 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">
-                                                        {certificacion.nombre}
+                                                        {certificacion.name}
                                                     </h4>
                                                     <span
                                                         className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getInstitutionColor(
-                                                            certificacion.otorgado_por
+                                                            certificacion.awarded_by
                                                         )}`}
                                                     >
                                                         {
-                                                            certificacion.otorgado_por.split(
+                                                            certificacion.awarded_by.split(
                                                                 ","
                                                             )[0]
                                                         }
@@ -202,22 +241,22 @@ const Certificaciones = () => {
                                                 {/* Institución */}
                                                 <p className="text-orange-400 flex items-center gap-2 text-sm">
                                                     <Building size={14} />
-                                                    {certificacion.otorgado_por}
+                                                    {certificacion.awarded_by}
                                                 </p>
 
                                                 {/* Horas */}
-                                                {certificacion.horas && (
+                                                {certificacion.hours && (
                                                     <p className="text-neutral-300 flex items-center gap-2 text-sm">
                                                         <Clock size={14} />
-                                                        {typeof certificacion.horas ===
+                                                        {typeof certificacion.hours ===
                                                         "number"
-                                                            ? `${certificacion.horas} horas`
-                                                            : certificacion.horas}
+                                                            ? `${certificacion.hours} horas`
+                                                            : certificacion.hours}
                                                     </p>
                                                 )}
 
                                                 {/* Programa */}
-                                                {certificacion.parte_de && (
+                                                {certificacion.part_of && (
                                                     <div className="bg-neutral-800 px-3 py-2 rounded border-l-4 border-orange-500">
                                                         <p className="text-xs text-neutral-400">
                                                             <Star
@@ -225,7 +264,7 @@ const Certificaciones = () => {
                                                                 className="inline mr-1"
                                                             />
                                                             {
-                                                                certificacion.parte_de
+                                                                certificacion.part_of
                                                             }
                                                         </p>
                                                     </div>
@@ -234,8 +273,11 @@ const Certificaciones = () => {
                                                 {/* Badge de año */}
                                                 <div className="flex justify-between items-center pt-2 border-t border-neutral-800">
                                                     <span className="text-xs text-neutral-500">
-                                                        Obtenida en{" "}
-                                                        {certificacion.anio}
+                                                        {
+                                                            t.certificaciones
+                                                                .obtainedIn
+                                                        }{" "}
+                                                        {certificacion.year}
                                                     </span>
                                                     <Award
                                                         size={16}
@@ -257,7 +299,7 @@ const Certificaciones = () => {
                                             {/* Modal de imagen al hover con efecto de despegue */}
                                             <AnimatePresence>
                                                 {hoveredCert ===
-                                                    certificacion.nombre &&
+                                                    certificacion.name &&
                                                     hasImage && (
                                                         <motion.div
                                                             initial={{
@@ -302,7 +344,7 @@ const Certificaciones = () => {
                                                                         src={
                                                                             imagePath
                                                                         }
-                                                                        alt={`Certificado: ${certificacion.nombre}`}
+                                                                        alt={`Certificado: ${certificacion.name}`}
                                                                         className="w-full h-auto rounded-lg object-cover"
                                                                         onError={(
                                                                             e
@@ -341,7 +383,7 @@ const Certificaciones = () => {
                                                                     >
                                                                         <p className="text-white text-sm font-medium leading-tight">
                                                                             {
-                                                                                certificacion.nombre
+                                                                                certificacion.name
                                                                             }
                                                                         </p>
                                                                     </motion.div>
@@ -362,35 +404,35 @@ const Certificaciones = () => {
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div className="bg-neutral-900 p-4 rounded-lg">
                     <div className="text-2xl font-bold text-orange-500">
-                        {certificaciones_relevantes.length}
+                        {certifications.length}
                     </div>
-                    <div className="text-sm text-neutral-400">Total</div>
+                    <div className="text-sm text-neutral-400">
+                        {t.certificaciones.totalCertificates}
+                    </div>
                 </div>
                 <div className="bg-neutral-900 p-4 rounded-lg">
                     <div className="text-2xl font-bold text-green-500">
                         {years.length}
                     </div>
-                    <div className="text-sm text-neutral-400">Años</div>
+                    <div className="text-sm text-neutral-400">
+                        {t.certificaciones.years}
+                    </div>
                 </div>
                 <div className="bg-neutral-900 p-4 rounded-lg">
                     <div className="text-2xl font-bold text-blue-500">
-                        {
-                            certificaciones_relevantes.filter(
-                                (cert) => cert.horas
-                            ).length
-                        }
+                        {certifications.filter((cert) => cert.hours).length}
                     </div>
-                    <div className="text-sm text-neutral-400">Con horas</div>
+                    <div className="text-sm text-neutral-400">
+                        {t.certificaciones.withHours}
+                    </div>
                 </div>
                 <div className="bg-neutral-900 p-4 rounded-lg">
                     <div className="text-2xl font-bold text-purple-500">
-                        {
-                            certificaciones_relevantes.filter(
-                                (cert) => cert.parte_de
-                            ).length
-                        }
+                        {certifications.filter((cert) => cert.part_of).length}
                     </div>
-                    <div className="text-sm text-neutral-400">Programas</div>
+                    <div className="text-sm text-neutral-400">
+                        {t.certificaciones.programs}
+                    </div>
                 </div>
             </div>
         </div>

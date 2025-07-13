@@ -1,17 +1,24 @@
+"use client";
+
 import { Briefcase, Calendar, Building, CheckCircle } from "lucide-react";
-import cvData from "../cvjson.json";
+import { useTranslations } from "../hooks/useTranslations";
+import { useLanguage } from "../contexts/LanguageContext";
+import { getExperience } from "../utils/cvHelpers";
 
 const Experiencia = () => {
-    const { experiencia_educacion_desarrollo } = cvData;
+    const { t, cvData } = useTranslations();
+    const { language } = useLanguage();
+
+    const experience = getExperience(cvData, language);
 
     return (
         <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
-                Experiencia Laboral
+                {t.experiencia.title}
             </h2>
 
             <div className="space-y-8">
-                {experiencia_educacion_desarrollo.map((experiencia, index) => (
+                {experience.map((exp, index) => (
                     <div
                         key={index}
                         className="bg-neutral-900 p-6 rounded-lg border border-neutral-800 hover:border-orange-500 transition-colors"
@@ -23,19 +30,19 @@ const Experiencia = () => {
                                         size={20}
                                         className="text-orange-500"
                                     />
-                                    {experiencia.puesto}
+                                    {exp.position}
                                 </h3>
                                 <p className="text-lg text-orange-400 mb-1 flex items-center gap-2">
                                     <Building size={16} />
-                                    {experiencia.empresa}
+                                    {exp.company}
                                 </p>
                                 <p className="text-neutral-400 flex items-center gap-2">
                                     <Calendar size={16} />
-                                    {experiencia.periodo}
+                                    {exp.period}
                                 </p>
-                                {experiencia.contacto && (
+                                {exp.contact && (
                                     <p className="text-sm text-neutral-500 mt-1">
-                                        Contacto: {experiencia.contacto}
+                                        {t.experiencia.contact}: {exp.contact}
                                     </p>
                                 )}
                             </div>
@@ -43,19 +50,19 @@ const Experiencia = () => {
 
                         <div className="space-y-2">
                             <h4 className="text-sm font-medium text-neutral-300 uppercase tracking-wide">
-                                Responsabilidades:
+                                {t.experiencia.responsibilities}:
                             </h4>
                             <ul className="space-y-2">
-                                {experiencia.tareas.map((tarea, tareaIndex) => (
+                                {exp.tasks.map((task, taskIndex) => (
                                     <li
-                                        key={tareaIndex}
+                                        key={taskIndex}
                                         className="flex items-start gap-2 text-neutral-300"
                                     >
                                         <CheckCircle
                                             size={16}
                                             className="text-orange-500 mt-0.5 flex-shrink-0"
                                         />
-                                        <span>{tarea}</span>
+                                        <span>{task}</span>
                                     </li>
                                 ))}
                             </ul>

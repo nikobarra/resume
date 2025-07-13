@@ -1,8 +1,16 @@
+"use client";
+
 import { Code, Users, Brain, Wrench } from "lucide-react";
-import cvData from "../cvjson.json";
+import { useTranslations } from "../hooks/useTranslations";
+import { useLanguage } from "../contexts/LanguageContext";
+import { getTechnicalSkills, getSoftSkills } from "../utils/cvHelpers";
 
 const Habilidades = () => {
-    const { conocimientos_tecnicos, habilidades_blandas } = cvData;
+    const { t, cvData } = useTranslations();
+    const { language } = useLanguage();
+
+    const technicalSkills = getTechnicalSkills(cvData, language);
+    const softSkills = getSoftSkills(cvData, language);
 
     const renderSkillTags = (skills: string[], color: string) => (
         <div className="flex flex-wrap gap-2">
@@ -20,7 +28,7 @@ const Habilidades = () => {
     return (
         <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
-                Habilidades y Conocimientos
+                {t.habilidades.title}
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -29,10 +37,10 @@ const Habilidades = () => {
                     <div>
                         <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                             <Code size={20} className="text-orange-500" />
-                            Lenguajes de Programación
+                            {t.habilidades.languages}
                         </h3>
                         {renderSkillTags(
-                            conocimientos_tecnicos.lenguajes,
+                            technicalSkills.languages,
                             "bg-blue-600 text-white"
                         )}
                     </div>
@@ -40,10 +48,10 @@ const Habilidades = () => {
                     <div>
                         <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                             <Wrench size={20} className="text-orange-500" />
-                            Frameworks y Herramientas
+                            {t.habilidades.tools}
                         </h3>
                         {renderSkillTags(
-                            conocimientos_tecnicos.frameworks_y_herramientas,
+                            technicalSkills.frameworks_and_tools,
                             "bg-green-600 text-white"
                         )}
                     </div>
@@ -51,10 +59,10 @@ const Habilidades = () => {
                     <div>
                         <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                             <Brain size={20} className="text-orange-500" />
-                            Metodologías
+                            {t.habilidades.methodologies}
                         </h3>
                         {renderSkillTags(
-                            conocimientos_tecnicos.metodologias,
+                            technicalSkills.methodologies,
                             "bg-purple-600 text-white"
                         )}
                     </div>
@@ -62,10 +70,10 @@ const Habilidades = () => {
                     <div>
                         <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                             <Wrench size={20} className="text-orange-500" />
-                            Otros Conocimientos
+                            {t.habilidades.otherKnowledge}
                         </h3>
                         {renderSkillTags(
-                            conocimientos_tecnicos.otros,
+                            technicalSkills.other,
                             "bg-gray-600 text-white"
                         )}
                     </div>
@@ -75,12 +83,9 @@ const Habilidades = () => {
                 <div>
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                         <Users size={20} className="text-orange-500" />
-                        Habilidades Blandas
+                        {t.habilidades.softSkills}
                     </h3>
-                    {renderSkillTags(
-                        habilidades_blandas,
-                        "bg-orange-600 text-white"
-                    )}
+                    {renderSkillTags(softSkills, "bg-orange-600 text-white")}
                 </div>
             </div>
         </div>

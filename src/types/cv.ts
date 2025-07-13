@@ -1,52 +1,86 @@
-export interface InformacionPersonal {
-    nombre_completo: string;
-    telefono: string;
-    correo_electronico: string;
-    ubicacion: string;
-}
-
-export interface Educacion {
-    titulo: string;
-    institucion: string;
-    periodo: string;
-    estado: string;
-}
-
-export interface Certificacion {
-    nombre: string;
-    otorgado_por: string;
-    anio: number;
-    horas?: number | string;
-    parte_de?: string;
-}
-
-export interface Experiencia {
-    puesto: string;
-    empresa: string;
-    contacto?: string;
-    periodo: string;
-    tareas: string[];
-}
-
-export interface ConocimientosTecnicos {
-    lenguajes: string[];
-    frameworks_y_herramientas: string[];
-    metodologias: string[];
-    otros: string[];
-}
-
-export interface Disponibilidad {
-    tipo: string;
-    modalidad: string;
-}
-
-export interface CVData {
-    informacion_personal: InformacionPersonal;
+// Tipos para el CV en español
+export interface CVDataEs {
+    informacion_personal: {
+        nombre_completo: string;
+        telefono: string;
+        correo_electronico: string;
+        ubicacion: string;
+    };
     perfil_profesional: string;
-    educacion: Educacion[];
-    certificaciones_relevantes: Certificacion[];
-    experiencia_educacion_desarrollo: Experiencia[];
-    conocimientos_tecnicos: ConocimientosTecnicos;
+    educacion: {
+        titulo: string;
+        institucion: string;
+        periodo: string;
+        estado: string;
+    }[];
+    certificaciones_relevantes: {
+        nombre: string;
+        otorgado_por: string;
+        anio: number;
+        horas?: number | string;
+        parte_de?: string;
+    }[];
+    experiencia_educacion_desarrollo: {
+        puesto: string;
+        empresa: string;
+        periodo: string;
+        contacto?: string;
+        tareas: string[];
+    }[];
+    conocimientos_tecnicos: {
+        lenguajes: string[];
+        frameworks_y_herramientas: string[];
+        metodologias: string[];
+        otros: string[];
+    };
     habilidades_blandas: string[];
-    disponibilidad: Disponibilidad;
+    disponibilidad: {
+        tipo: string;
+        modalidad: string;
+    };
 }
+
+// Tipos para el CV en inglés
+export interface CVDataEn {
+    personal_information: {
+        full_name: string;
+        phone: string;
+        email: string;
+        location: string;
+    };
+    professional_summary: string;
+    education: {
+        title: string;
+        institution: string;
+        period: string;
+        status: string;
+    }[];
+    relevant_certifications: {
+        name: string;
+        awarded_by: string;
+        year: number;
+        hours?: number | string;
+        part_of?: string;
+    }[];
+    experience_education_development: {
+        position: string;
+        company: string;
+        period: string;
+        contact?: string;
+        tasks: string[];
+    }[];
+    technical_skills: {
+        languages: string[];
+        frameworks_and_tools: string[];
+        methodologies: string[];
+        other: string[];
+    };
+    soft_skills: string[];
+    availability: {
+        type: string;
+        modality: string;
+    };
+}
+
+// Tipo unión para ambos formatos
+export type CVData = CVDataEs | CVDataEn;

@@ -1,9 +1,11 @@
 "use client";
 
 import { Heart, Code, Github, Linkedin, Mail } from "lucide-react";
+import { useTranslations } from "../hooks/useTranslations";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const { t } = useTranslations();
 
     return (
         <footer className="bg-gray-900 text-white py-8 mt-16">
@@ -13,9 +15,9 @@ const Footer = () => {
                     <div className="flex items-center space-x-2 mb-4 md:mb-0">
                         <Code className="w-5 h-5 text-blue-400" />
                         <span className="text-sm">
-                            Desarrollado con{" "}
+                            {t.footer.developedBy}{" "}
                             <Heart className="inline w-4 h-4 text-red-500 mx-1" />{" "}
-                            por{" "}
+                            {t.footer.with}{" "}
                             <a
                                 href="mailto:nicolasbarrapelecano@gmail.com"
                                 className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
@@ -58,11 +60,11 @@ const Footer = () => {
                 {/* Tecnologías utilizadas */}
                 <div className="mt-6 text-center">
                     <p className="text-xs text-gray-400 mb-2">
-                        Construido con Next.js, React, TypeScript y TailwindCSS
+                        {t.footer.builtWith}
                     </p>
                     <p className="text-xs text-gray-500">
-                        © {currentYear} Nicolás M. Barra Pelecano. Todos los
-                        derechos reservados.
+                        © {currentYear} Nicolás M. Barra Pelecano.{" "}
+                        {t.footer.allRightsReserved}
                     </p>
                 </div>
             </div>

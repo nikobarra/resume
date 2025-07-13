@@ -1,0 +1,204 @@
+{
+    "personal_information": {
+        "full_name": "Nicolás Matías Barra Pelecano",
+        "phone": "+54 2266-440616",
+        "email": "nicolasbarrapelecano@gmail.com",
+        "location": "Mar del Plata, Buenos Aires"
+    },
+    "professional_summary": "I am a technology enthusiast with a strong focus on data analysis and engineering, currently pursuing a Higher Technical Degree in Data Science and Artificial Intelligence. I possess a solid foundation in Python and SQL, with experience in programming and project development. I am seeking my first IT job opportunity as a Data Engineer or Data Analyst, motivated to learn, grow professionally, and apply my knowledge in an innovative data management environment.",
+    "education": [
+        {
+            "title": "Higher Technical Degree in Data Science and Artificial Intelligence",
+            "institution": "ISFT N° 204, Mar del Plata",
+            "period": "Since March 2025 (First year in progress)",
+            "status": "All subjects taken so far have been promoted."
+        }
+    ],
+    "relevant_certifications": [
+        {
+            "name": "Scrum Foundation",
+            "awarded_by": "CertiProf",
+            "year": 2023
+        },
+        {
+            "name": "Python Essentials 1",
+            "awarded_by": "Cisco Networking Academy",
+            "year": 2023
+        },
+        {
+            "name": "Python 3 - Beginner Level",
+            "awarded_by": "UTN FRBA",
+            "year": 2023,
+            "hours": 75
+        },
+        {
+            "name": "Web Development",
+            "awarded_by": "Coderhouse",
+            "year": 2021,
+            "hours": 38
+        },
+        {
+            "name": "Javascript",
+            "awarded_by": "Coderhouse",
+            "year": 2021,
+            "hours": 36
+        },
+        {
+            "name": "Python",
+            "awarded_by": "Coderhouse",
+            "year": 2021,
+            "hours": 52
+        },
+        {
+            "name": "AI Design and Deployment Module",
+            "awarded_by": "UBA IALAB",
+            "year": 2023,
+            "hours": 200,
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+        },
+        {
+            "name": "Data Governance Module",
+            "awarded_by": "UBA IALAB",
+            "year": 2023,
+            "hours": 120,
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+        },
+        {
+            "name": "Artificial Intelligence Governance",
+            "awarded_by": "UBA IALAB",
+            "year": 2023,
+            "hours": 50,
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+        },
+        {
+            "name": "Programming ABCs",
+            "awarded_by": "UBA IALAB",
+            "year": 2023,
+            "hours": 20,
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+        },
+        {
+            "name": "Basic Multidisciplinary Program in Data and Artificial Intelligence Training",
+            "awarded_by": "UBA IALAB",
+            "year": 2022,
+            "hours": 50,
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+        },
+        {
+            "name": "Programming Essentials in Python",
+            "awarded_by": "ISPC",
+            "year": 2023,
+            "hours": 75
+        },
+        {
+            "name": "Python Fundamentals Course",
+            "awarded_by": "Platzi",
+            "year": 2022,
+            "hours": 17
+        },
+        {
+            "name": "Introduction to Databases and SQL",
+            "awarded_by": "EducaciónIT",
+            "year": 2024,
+            "hours": 18
+        },
+        {
+            "name": "Python for Data Analysis",
+            "awarded_by": "EducaciónIT",
+            "year": 2024,
+            "hours": 18
+        },
+        {
+            "name": "Introduction to Artificial Intelligence and Prompt Engineering",
+            "awarded_by": "EducaciónIT",
+            "year": 2024,
+            "hours": 18
+        },
+        {
+            "name": "Introduction to Data Analysis with Python",
+            "awarded_by": "Academia Desafío Latam",
+            "year": 2023
+        },
+        {
+            "name": "Database Course with Python",
+            "awarded_by": "Código Facilito",
+            "year": 2024,
+            "hours": "6 hours 21 minutes"
+        },
+        {
+            "name": "Tools for Trainers",
+            "awarded_by": "Asociación Gremial de Computación",
+            "year": 2024
+        },
+        {
+            "name": "Argentina Programa 4.0 - 1st Stage #SeProgramar",
+            "awarded_by": "Ministry of Economy, Secretariat of Knowledge Economy, INTI",
+            "year": 2022
+        }
+    ],
+    "experience_education_development": [
+        {
+            "position": "Python Professor (Freelance)",
+            "company": "Be Wise, Spain",
+            "contact": "Mr. Nahuel Silva Dassis +54 9 11 4974 5485",
+            "period": "April 2024 - Present",
+            "tasks": [
+                "Practical classes at beginner and intermediate levels.",
+                "Focus on problem-solving and application development."
+            ]
+        },
+        {
+            "position": "Development Tutor",
+            "company": "Coderhouse",
+            "contact": "Franco Di Martino +54 9 280 4390162",
+            "period": "January 2022 - September 2024",
+            "tasks": [
+                "Support for students in technologies such as Python, Django, and JavaScript.",
+                "Correction of exercises and guidance on integrated web projects."
+            ]
+        },
+        {
+            "position": "Learning Facilitator",
+            "company": "Junior Achievement Argentina",
+            "period": "May 2022 - July 2022",
+            "tasks": [
+                "National teacher training in web development.",
+                "Implementation of educational programs focused on programming."
+            ]
+        }
+    ],
+    "technical_skills": {
+        "languages": ["Python", "JavaScript", "SQL"],
+        "frameworks_and_tools": [
+            "Django",
+            "HTML5",
+            "CSS3",
+            "Bootstrap",
+            "Git",
+            "GitHub",
+            "Artificial Intelligence (AI)",
+            "Prompt Engineering",
+            "Data Analysis"
+        ],
+        "methodologies": ["Scrum (Agile)"],
+        "other": [
+            "Tutoring",
+            "technical training",
+            "remote work",
+            "educational planning"
+        ]
+    },
+    "soft_skills": [
+        "Educational Orientation",
+        "Problem Solving",
+        "Effective Communication",
+        "Proactivity",
+        "Adaptability",
+        "Teamwork",
+        "Planning and Organization"
+    ],
+    "availability": {
+        "type": "Full-time",
+        "modality": "Remote"
+    }
+}

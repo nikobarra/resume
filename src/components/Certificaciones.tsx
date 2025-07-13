@@ -94,7 +94,7 @@ const Certificaciones = () => {
             "Herramientas para Formadores":
                 "/img/certificates/herramientas para formadores.jpg",
             "Argentina Programa 4.0 - 1° Etapa #SeProgramar":
-                "/img/certificates/argentina programa_ # se programar .jpg",
+                "/img/certificates/argentina programa_se programar.jpg",
         };
 
         return imageMap[certName] || null;

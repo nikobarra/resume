@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-Este proyecto es una modernización de un CV/portfolio estático a una aplicación web moderna construida con **React**, **Next.js 15**, **TypeScript** y **TailwindCSS**. El proyecto migra completamente la información de un JSON estático a componentes React modulares y responsivos.
+Este proyecto es una modernización de un CV/portfolio estático a una aplicación web moderna construida con **React**, **Next.js 15**, **TypeScript** y **TailwindCSS**. El proyecto migra completamente la información de un JSON estático a componentes React modulares y responsivos, con soporte completo para **internacionalización** (español/inglés).
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -13,6 +13,7 @@ Este proyecto es una modernización de un CV/portfolio estático a una aplicaci�
 -   **Framer Motion** - Biblioteca de animaciones
 -   **Lucide React** - Iconos modernos
 -   **Turbopack** - Bundler rápido de Vite
+-   **React Context** - Gestión de estado para internacionalización
 
 ## 📁 Estructura del Proyecto
 
@@ -20,42 +21,76 @@ Este proyecto es una modernización de un CV/portfolio estático a una aplicaci�
 portfolio-modern/
 ├── src/
 │   ├── components/
-│   │   ├── Header.tsx          # Navegación principal
-│   │   ├── Perfil.tsx          # Información personal
+│   │   ├── Navbar.tsx          # Navegación moderna con transiciones fluidas
+│   │   ├── Header.tsx          # Información personal y contacto
+│   │   ├── Perfil.tsx          # Sección de perfil profesional
 │   │   ├── Habilidades.tsx     # Skills y tecnologías
 │   │   ├── Experiencia.tsx     # Experiencia laboral
 │   │   ├── Educacion.tsx       # Formación académica
-│   │   ├── Certificaciones.tsx # Certificados con modal
-│   │   └── Footer.tsx          # Pie de página con información del desarrollo
+│   │   ├── Certificaciones.tsx # Certificados con modal interactivo
+│   │   ├── Footer.tsx          # Pie de página con información del desarrollo
+│   │   └── LanguageSwitch.tsx  # Switch de idioma español/inglés
+│   ├── contexts/
+│   │   └── LanguageContext.tsx # Contexto para gestión de idiomas
+│   ├── hooks/
+│   │   └── useTranslations.ts  # Hook personalizado para traducciones
+│   ├── utils/
+│   │   └── cvHelpers.ts        # Funciones helper para datos del CV
+│   ├── types/
+│   │   └── cv.ts              # Tipos TypeScript para datos del CV
+│   ├── translations/
+│   │   ├── es.ts              # Traducciones en español
+│   │   └── en.ts              # Traducciones en inglés
 │   ├── app/
-│   │   ├── layout.tsx          # Layout principal
-│   │   └── page.tsx            # Página principal
-│   └── cvjson.json             # Datos del CV
+│   │   ├── layout.tsx         # Layout principal
+│   │   └── page.tsx           # Página principal
+│   ├── cvjson.json            # Datos del CV en español
+│   └── cvjson_en.json         # Datos del CV en inglés
 ├── public/
 │   └── img/
-│       └── certificates/       # Imágenes de certificados
+│       └── certificates/      # Imágenes de certificados
 ├── package.json
 └── README.md
 ```
 
 ## ✨ Características Principales
 
+### 🌐 Sistema de Internacionalización
+
+-   **Doble Idioma** - Soporte completo para español e inglés
+-   **Switch Dinámico** - Cambio de idioma en tiempo real
+-   **Datos Separados** - Archivos JSON independientes para cada idioma
+-   **Traducciones Completas** - Interfaz y contenido traducidos
+-   **Context API** - Gestión centralizada del estado de idioma
+
 ### 🎨 Diseño Moderno
 
 -   **Responsive Design** - Adaptable a todos los dispositivos
--   **Dark/Light Mode** - Soporte para temas
+-   **Dark Theme** - Diseño oscuro elegante
 -   **Animaciones Suaves** - Transiciones con Framer Motion
 -   **Accesibilidad** - Implementación de ARIA labels y navegación por teclado
 
+### 🧭 Navegación Avanzada
+
+#### Navbar Moderna
+
+-   **Fija en Scroll** - Cambia de transparente a semi-opaca
+-   **Scroll Spy** - Detecta automáticamente la sección activa
+-   **Navegación Suave** - Scroll automático a secciones
+-   **Responsive** - Menú hamburguesa en móvil con panel lateral
+-   **Animaciones** - Transiciones fluidas y efectos hover
+-   **Indicador Activo** - Línea naranja que se mueve entre secciones
+
 ### 🔧 Componentes Modulares
 
--   **Header** - Navegación interna con scroll suave
--   **Perfil** - Información personal con foto
+-   **Navbar** - Navegación moderna con switch de idioma
+-   **Header** - Información personal con nombre completo y subtítulo
+-   **Perfil** - Descripción profesional
 -   **Habilidades** - Grid de tecnologías con iconos
 -   **Experiencia** - Timeline de experiencia laboral
 -   **Educación** - Formación académica
 -   **Certificaciones** - Galería con modal interactivo
--   **Footer** - Pie de página con información del desarrollo, año dinámico y enlaces sociales
+-   **Footer** - Pie de página con información del desarrollo
 
 ### 🎯 Funcionalidades Especiales
 
@@ -66,6 +101,14 @@ portfolio-modern/
 -   **Animación 3D** - Efecto de "despegue" con Framer Motion
 -   **Blur Inicial** - Transición suave de entrada
 -   **Texto Animado** - Nombre del certificado con animación
+-   **Soporte Multiidioma** - Imágenes mapeadas para ambos idiomas
+
+#### Sistema de Datos
+
+-   **Tipos TypeScript** - Tipado completo para datos del CV
+-   **Funciones Helper** - Acceso unificado a datos en ambos idiomas
+-   **Validación** - Verificación de estructura de datos
+-   **Flexibilidad** - Fácil extensión para nuevos campos
 
 ## 🛠️ Instalación y Ejecución
 
@@ -112,19 +155,36 @@ npm run lint         # Linting con ESLint
 
 ## 📊 Datos del CV
 
-El proyecto utiliza un archivo JSON (`cvjson.json`) que contiene toda la información del CV:
+El proyecto utiliza archivos JSON separados para cada idioma:
 
--   **Información Personal** - Nombre, título, contacto
+-   **`cvjson.json`** - Datos en español
+-   **`cvjson_en.json`** - Datos en inglés
+
+### Estructura de Datos
+
+-   **Información Personal** - Nombre completo, contacto, ubicación
+-   **Perfil Profesional** - Descripción y objetivos
 -   **Habilidades** - Tecnologías y niveles de experiencia
--   **Experiencia Laboral** - Empresas, roles, fechas
--   **Educación** - Estudios formales
+-   **Experiencia Laboral** - Empresas, roles, fechas, tareas
+-   **Educación** - Estudios formales y estado actual
 -   **Certificaciones** - Cursos y certificados con imágenes
+-   **Habilidades Blandas** - Competencias personales
 
 ## 🎨 Personalización
 
 ### Modificar Datos
 
-Edita el archivo `src/cvjson.json` para actualizar tu información personal.
+Edita los archivos JSON correspondientes:
+
+-   `src/cvjson.json` para español
+-   `src/cvjson_en.json` para inglés
+
+### Cambiar Traducciones
+
+Modifica los archivos de traducción:
+
+-   `src/translations/es.ts` para español
+-   `src/translations/en.ts` para inglés
 
 ### Cambiar Estilos
 
@@ -135,8 +195,8 @@ Edita el archivo `src/cvjson.json` para actualizar tu información personal.
 ### Añadir Certificados
 
 1. Coloca la imagen en `public/img/certificates/`
-2. Actualiza el mapeo en `Certificaciones.tsx`
-3. Añade la entrada en `cvjson.json`
+2. Actualiza el mapeo en `Certificaciones.tsx` para ambos idiomas
+3. Añade la entrada en ambos archivos JSON
 
 ## 🔧 Configuración Avanzada
 
@@ -153,6 +213,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 -   **Imágenes** - Optimizadas automáticamente por Next.js
 -   **Bundle** - Tree-shaking automático
 -   **Performance** - Lazy loading de componentes
+-   **SEO** - Meta tags dinámicos según idioma
 
 ## 📱 Responsive Design
 
@@ -161,6 +222,13 @@ El proyecto está optimizado para:
 -   **Desktop** - 1024px+
 -   **Tablet** - 768px - 1023px
 -   **Mobile** - 320px - 767px
+
+### Características Responsive
+
+-   **Navbar** - Menú hamburguesa en móvil
+-   **Grids** - Adaptación automática de columnas
+-   **Tipografía** - Escalado responsivo
+-   **Espaciado** - Márgenes y padding adaptativos
 
 ## 🚀 Despliegue
 
@@ -191,6 +259,28 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
+## 🌐 Características de Internacionalización
+
+### Funcionalidades
+
+-   **Switch de Idioma** - Toggle en la navbar
+-   **Datos Dinámicos** - Contenido cambia según idioma
+-   **Interfaz Traducida** - Todos los textos se adaptan
+-   **Imágenes de Certificados** - Mapeo para ambos idiomas
+-   **Persistencia** - Estado del idioma se mantiene
+
+### Estructura de Traducciones
+
+```typescript
+// Ejemplo de estructura de traducciones
+{
+  header: { title: "Nicolás Pelecano", subtitle: "..." },
+  perfil: { title: "Perfil", description: "..." },
+  habilidades: { title: "Habilidades", ... },
+  // ... más secciones
+}
+```
+
 ## 🤝 Contribución
 
 1. Fork el proyecto
@@ -205,7 +295,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 👨‍💻 Autor
 
-\*_Nicolas M. Barra Pelecano_ - [nicolasbarrapelecano@gmail.com](mailto:nicolasbarrapelecano@gmail.com)
+**Nicolás Matías Barra Pelecano** - [nicolasbarrapelecano@gmail.com](mailto:nicolasbarrapelecano@gmail.com)
 
 ## 🙏 Agradecimientos
 

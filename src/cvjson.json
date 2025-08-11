@@ -203,6 +203,27 @@
         "Trabajo en Equipo",
         "Planificación y Organización"
     ],
+    "proyectos": [
+        {
+            "nombre": "Melisa Santoianni - Coaching Floral",
+            "descripcion": "Sitio web profesional para coaching floral y bienestar emocional. Incluye sistema de reservas, formularios de contacto, diseño responsive y optimizaciones SEO. Desarrollado con tecnologías web modernas y desplegado en Vercel con analytics integrado.",
+            "tecnologias": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Responsive Design",
+                "Vercel Analytics",
+                "SEO",
+                "Performance Optimization"
+            ],
+            "imagen": "/img/projects/web_melisa_santoianni.png",
+            "url_demo": "https://melisa-santoianni-coaching.vercel.app/#hero",
+            "url_repositorio": "https://github.com/nikobarra/melisa_santoianni_coaching",
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true
+        }
+    ],
     "disponibilidad": {
         "tipo": "Tiempo completo",
         "modalidad": "Modalidad remota"

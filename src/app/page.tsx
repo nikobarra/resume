@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Perfil from "@/components/Perfil";
 import Habilidades from "@/components/Habilidades";
 import Experiencia from "@/components/Experiencia";
+import Proyectos from "@/components/Proyectos";
 import Educacion from "@/components/Educacion";
 import Certificaciones from "@/components/Certificaciones";
 import Footer from "@/components/Footer";
@@ -22,10 +23,13 @@ export default function Home() {
                 <section id="experiencia" className="py-12">
                     <Experiencia />
                 </section>
-                <section id="educacion" className="py-12 bg-neutral-900">
+                <section id="proyectos" className="py-12 bg-neutral-900">
+                    <Proyectos />
+                </section>
+                <section id="educacion" className="py-12">
                     <Educacion />
                 </section>
-                <section id="certificaciones" className="py-12">
+                <section id="certificaciones" className="py-12 bg-neutral-900">
                     <Certificaciones />
                 </section>
             </div>

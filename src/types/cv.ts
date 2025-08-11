@@ -34,6 +34,17 @@ export interface CVDataEs {
         otros: string[];
     };
     habilidades_blandas: string[];
+    proyectos: {
+        nombre: string;
+        descripcion: string;
+        tecnologias: string[];
+        imagen: string;
+        url_demo: string;
+        url_repositorio: string;
+        fecha_finalizacion: string;
+        estado: string;
+        destacado: boolean;
+    }[];
     disponibilidad: {
         tipo: string;
         modalidad: string;
@@ -76,6 +87,17 @@ export interface CVDataEn {
         other: string[];
     };
     soft_skills: string[];
+    projects: {
+        name: string;
+        description: string;
+        technologies: string[];
+        image: string;
+        demo_url: string;
+        repository_url: string;
+        completion_date: string;
+        status: string;
+        featured: boolean;
+    }[];
     availability: {
         type: string;
         modality: string;

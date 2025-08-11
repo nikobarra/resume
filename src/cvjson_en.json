@@ -203,6 +203,27 @@
         "Teamwork",
         "Planning and Organization"
     ],
+    "projects": [
+        {
+            "name": "Melisa Santoianni - Floral Coaching",
+            "description": "Professional website for floral coaching and emotional wellness. Features booking system, contact forms, responsive design and SEO optimizations. Built with modern web technologies and deployed on Vercel with integrated analytics.",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Responsive Design",
+                "Vercel Analytics",
+                "SEO",
+                "Performance Optimization"
+            ],
+            "image": "/img/projects/web_melisa_santoianni.png",
+            "demo_url": "https://melisa-santoianni-coaching.vercel.app/#hero",
+            "repository_url": "https://github.com/nikobarra/melisa_santoianni_coaching",
+            "completion_date": "2025",
+            "status": "Completed",
+            "featured": true
+        }
+    ],
     "availability": {
         "type": "Full-time",
         "modality": "Remote"

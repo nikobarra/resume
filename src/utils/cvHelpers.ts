@@ -141,6 +141,39 @@ export const getSoftSkills = (
     }
 };
 
+export const getProjects = (
+    cvData: CVDataEs | CVDataEn,
+    language: "es" | "en"
+) => {
+    if (language === "es") {
+        const data = (cvData as CVDataEs).proyectos;
+        return data.map((project) => ({
+            name: project.nombre,
+            description: project.descripcion,
+            technologies: project.tecnologias,
+            image: project.imagen,
+            demo_url: project.url_demo,
+            repository_url: project.url_repositorio,
+            completion_date: project.fecha_finalizacion,
+            status: project.estado,
+            featured: project.destacado,
+        }));
+    } else {
+        const data = (cvData as CVDataEn).projects;
+        return data.map((project) => ({
+            name: project.name,
+            description: project.description,
+            technologies: project.technologies,
+            image: project.image,
+            demo_url: project.demo_url,
+            repository_url: project.repository_url,
+            completion_date: project.completion_date,
+            status: project.status,
+            featured: project.featured,
+        }));
+    }
+};
+
 export const getAvailability = (
     cvData: CVDataEs | CVDataEn,
     language: "es" | "en"

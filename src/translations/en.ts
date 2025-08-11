@@ -65,6 +65,21 @@ export const en = {
         certifications: "certifications",
     },
 
+    // Proyectos
+    proyectos: {
+        title: "Projects",
+        viewProject: "View Project",
+        viewCode: "View Code",
+        technologies: "Technologies",
+        status: "Status",
+        completionDate: "Completion date",
+        featured: "Featured",
+        demo: "View",
+        repository: "Repository",
+        noProjects: "No projects available",
+        projectDetails: "Project details",
+    },
+
     // Footer
     footer: {
         developedBy: "Developed by",

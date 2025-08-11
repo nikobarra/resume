@@ -50,6 +50,7 @@ const Navbar = () => {
         { id: "perfil", label: t.perfil.title, href: "#perfil" },
         { id: "habilidades", label: t.habilidades.title, href: "#habilidades" },
         { id: "experiencia", label: t.experiencia.title, href: "#experiencia" },
+        { id: "proyectos", label: t.proyectos.title, href: "#proyectos" },
         { id: "educacion", label: t.educacion.title, href: "#educacion" },
         {
             id: "certificaciones",

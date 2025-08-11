@@ -67,7 +67,7 @@ export const es = {
 
     // Proyectos
     proyectos: {
-        title: "Proyectos",
+        title: "Proyectos Independientes",
         viewProject: "Ver Proyecto",
         viewCode: "Ver Código",
         technologies: "Tecnologías",

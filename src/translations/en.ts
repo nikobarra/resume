@@ -67,7 +67,7 @@ export const en = {
 
     // Proyectos
     proyectos: {
-        title: "Projects",
+        title: "Freelance Projects",
         viewProject: "View Project",
         viewCode: "View Code",
         technologies: "Technologies",

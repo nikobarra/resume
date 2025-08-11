@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Github, Calendar, Star, Code, Eye } from "lucide-react";
+import { Github, Calendar, Star, Code, Eye } from "lucide-react";
 import { useTranslations } from "../hooks/useTranslations";
 import { useLanguage } from "../contexts/LanguageContext";
 import { getProjects } from "../utils/cvHelpers";

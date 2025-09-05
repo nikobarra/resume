@@ -39,7 +39,7 @@ export interface CVDataEs {
         descripcion: string;
         tecnologias: string[];
         imagen: string;
-        url_demo: string;
+        url_demo: string | null;
         url_repositorio: string;
         fecha_finalizacion: string;
         estado: string;
@@ -92,7 +92,7 @@ export interface CVDataEn {
         description: string;
         technologies: string[];
         image: string;
-        demo_url: string;
+        demo_url: string | null;
         repository_url: string;
         completion_date: string;
         status: string;

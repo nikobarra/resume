@@ -222,6 +222,24 @@
             "fecha_finalizacion": "2025",
             "estado": "Completado",
             "destacado": true
+        },
+        {
+            "nombre": "Extracción, Procesamiento y Almacenamiento de Datos - UTN",
+            "descripcion": "Pipeline de datos idempotente con The News API. Extracción, transformación y almacenamiento en Delta Lake (Bronze, Silver, Gold).",
+            "tecnologias": [
+                "Python",
+                "Pandas",
+                "Delta Lake",
+                "Parquet",
+                "Pytest",
+                "The News API"
+            ],
+            "imagen": "/img/projects/pipeline_utn.jpeg",
+            "url_demo": null,
+            "url_repositorio": "https://github.com/nikobarra/proyecto_utn_datos",
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true
         }
     ],
     "disponibilidad": {

@@ -222,7 +222,27 @@
             "completion_date": "2025",
             "status": "Completed",
             "featured": true
+        },
+        {
+            "name": "Data Extraction, Processing and Storage - UTN",
+            "description": "Idempotent data pipeline with The News API. Extraction, transformation, and storage in Delta Lake (Bronze, Silver, Gold).",
+            "technologies": [
+                "Python",
+                "Pandas",
+                "Delta Lake",
+                "Parquet",
+                "Pytest",
+                "The News API"
+            ],
+            "image": "/img/projects/pipeline_utn.jpeg",
+            "demo_url": null,
+            "repository_url": "https://github.com/nikobarra/proyecto_utn_datos",
+            "completion_date": "2025",
+            "status": "Completed",
+            "featured": true
         }
+        
+        
     ],
     "availability": {
         "type": "Full-time",

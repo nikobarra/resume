@@ -19,7 +19,7 @@ const Header = () => {
                     {/* Información principal */}
                     <div className="flex flex-col lg:flex-row items-center gap-6">
                         <Image
-                            src="/img/perfil.jpg"
+                            src="/img/perfil.png"
                             alt={`Foto de perfil de ${personalInfo.name}`}
                             width={120}
                             height={120}

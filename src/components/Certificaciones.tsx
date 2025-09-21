@@ -64,6 +64,8 @@ const Certificaciones = () => {
     const getCertificateImage = (certName: string) => {
         const imageMap: Record<string, string> = {
             // Certificados en español
+            "Ingenieria de datos":
+                "/img/certificates/Data Engineering - utn 2025.png",
             "Scrum Foundation": "/img/certificates/Scrum Foundation.jpg",
             "Python Essentials 1": "/img/certificates/python essentials 1.jpg",
             "Python 3 - Nivel Inicial":
@@ -104,6 +106,8 @@ const Certificaciones = () => {
                 "/img/certificates/argentina programa_se programar.jpg",
 
             // Certificados en inglés
+            "Data Engineering":
+                "/img/certificates/Data Engineering - utn 2025.png",
             "Python 3 - Beginner Level":
                 "/img/certificates/Python 3 - nivel inicial.jpg",
             "Web Development": "/img/certificates/desarrollo web.png",

@@ -22,6 +22,12 @@
     ],
     "certificaciones_relevantes": [
         {
+            "nombre": "Ingenieria de datos",
+            "otorgado_por": "UTN FRBA",
+            "anio": 2025,
+            "horas": 60
+        },
+        {
             "nombre": "Scrum Foundation",
             "otorgado_por": "CertiProf",
             "anio": 2023

@@ -22,6 +22,12 @@
     ],
     "relevant_certifications": [
         {
+            "name": "Data Engineering",
+            "awarded_by": "UTN FRBA",
+            "year": 2025,
+            "hours": 60
+        },
+        {
             "name": "Scrum Foundation",
             "awarded_by": "CertiProf",
             "year": 2023
@@ -241,8 +247,6 @@
             "status": "Completed",
             "featured": true
         }
-        
-        
     ],
     "availability": {
         "type": "Full-time",

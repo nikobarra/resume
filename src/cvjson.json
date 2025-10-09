@@ -246,6 +246,26 @@
             "fecha_finalizacion": "2025",
             "estado": "Completado",
             "destacado": true
+        },
+        {
+            "nombre": "Monitor de Brecha Cambiaria",
+            "descripcion": "Aplicación de monitoreo automático 24/7 de la brecha entre dólar oficial y MEP en Argentina. Incluye alertas instantáneas, visualización histórica y notificaciones del sistema para traders, inversores y empresas que necesitan tomar decisiones financieras informadas.",
+            "tecnologias": [
+                "Python",
+                "Tkinter",
+                "BeautifulSoup",
+                "Matplotlib",
+                "Web Scraping",
+                "Sistema de Alertas",
+                "GUI",
+                "Datos en Tiempo Real"
+            ],
+            "imagen": "/img/projects/dolar_monitor.png",
+            "url_demo": null,
+            "url_repositorio": "https://github.com/nikobarra/dolar-monitor",
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true
         }
     ],
     "disponibilidad": {

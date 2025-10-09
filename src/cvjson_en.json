@@ -246,6 +246,26 @@
             "completion_date": "2025",
             "status": "Completed",
             "featured": true
+        },
+        {
+            "name": "Exchange Rate Gap Monitor",
+            "description": "24/7 automatic monitoring application for the gap between official and MEP dollar rates in Argentina. Features instant alerts, historical visualization, and system notifications for traders, investors, and companies needing to make informed financial decisions.",
+            "technologies": [
+                "Python",
+                "Tkinter",
+                "BeautifulSoup",
+                "Matplotlib",
+                "Web Scraping",
+                "Alert System",
+                "GUI",
+                "Real-time Data"
+            ],
+            "image": "/img/projects/dolar_monitor.png",
+            "demo_url": null,
+            "repository_url": "https://github.com/nikobarra/dolar-monitor",
+            "completion_date": "2025",
+            "status": "Completed",
+            "featured": true
         }
     ],
     "availability": {

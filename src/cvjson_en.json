@@ -260,9 +260,9 @@
                 "GUI",
                 "Real-time Data"
             ],
-            "image": "/img/projects/dolar_monitor.png",
+            "image": "/img/projects/dolar.png",
             "demo_url": null,
-            "repository_url": "https://github.com/nikobarra/dolar-monitor",
+            "repository_url": "https://github.com/nikobarra/brecha_oficial_mep",
             "completion_date": "2025",
             "status": "Completed",
             "featured": true

@@ -1,17 +1,27 @@
 {
     "personal_information": {
         "full_name": "Nicolás Matías Barra Pelecano",
-        "phone": "+54 2266-440616",
+        "professional_title": "Full Stack Developer · Python & Data Engineering · First Industry Role",
+        "phone": "+54 9 2266440616",
         "email": "nicolasbarrapelecano@gmail.com",
+        "website": "nicolasbarra.dev",
+        "github": "github.com/nikobarra",
+        "linkedin": "linkedin.com/in/nicolaspelecano",
         "location": "Mar del Plata, Buenos Aires"
     },
-    "professional_summary": "I am a technology enthusiast with a strong focus on data analysis and engineering, currently pursuing a Higher Technical Degree in Data Science and Artificial Intelligence. I possess a solid foundation in Python and SQL, with experience in programming and project development. I am seeking my first IT job opportunity as a Data Engineer or Data Analyst, motivated to learn, grow professionally, and apply my knowledge in an innovative data management environment.",
+    "professional_summary": "Developer with strong technical foundations and real production projects, seeking my first professional role in the industry. My path into development came through technical teaching — 3 years training over 200 students in Python, Django, and JavaScript gave me a deep understanding of clean code, project architecture, and best practices. I built websites for real clients, data pipelines, and my own applications. Currently pursuing a Technical Degree in Programming at UTN, with over 800 hours of certified training in Python, AI, and Data Engineering.",
     "education": [
+        {
+            "title": "University Technical Degree in Programming",
+            "institution": "Universidad Tecnológica Nacional (UTN), Mar del Plata",
+            "period": "In progress (since March 2026)",
+            "status": "In progress"
+        },
         {
             "title": "Higher Technical Degree in Data Science and Artificial Intelligence",
             "institution": "ISFT N° 204, Mar del Plata",
-            "period": "Since March 2025 (First year in progress)",
-            "status": "All subjects taken so far have been promoted."
+            "period": "Since March 2025",
+            "status": "1st year passed with excellence"
         },
         {
             "title": "Computer Technician",
@@ -22,151 +32,225 @@
     ],
     "relevant_certifications": [
         {
+            "name": "Diploma in Artificial Intelligence for Non-Programmers",
+            "awarded_by": "UTN FRBA",
+            "year": 2026,
+            "month": "February",
+            "hours": 36,
+            "image": "/img/certificates/diplomatura IA para no programadores.jpg"
+        },
+        {
+            "name": "Responsible AI",
+            "awarded_by": "Aleph (Digital Ad Expert)",
+            "year": 2026,
+            "month": "September",
+            "image": "/img/certificates/IA responsable.jpg"
+        },
+        {
+            "name": "Introduction to Data Science",
+            "awarded_by": "Cisco Networking Academy",
+            "year": 2026,
+            "month": "March",
+            "image": "/img/certificates/introduction to data science.jpg"
+        },
+        {
+            "name": "Introduction to SQL",
+            "awarded_by": "Accenture · Learning to Earning",
+            "year": 2026,
+            "month": "February",
+            "hours": 4.7,
+            "image": "/img/certificates/accenture introduccion a sql.jpg"
+        },
+        {
+            "name": "Python Diploma",
+            "awarded_by": "UTN FRBA",
+            "year": 2023,
+            "hours": 225,
+            "grade": "Outstanding"
+        },
+        {
             "name": "Data Engineering",
             "awarded_by": "UTN FRBA",
             "year": 2025,
-            "hours": 60
+            "hours": 60,
+            "image": "/img/certificates/Data Engineering - utn 2025.jpg"
+        },
+        {
+            "name": "Claude Code in Action",
+            "awarded_by": "Anthropic",
+            "year": 2026,
+            "month": "March",
+            "image": "/img/certificates/claude code in action.jpg"
+        },
+        {
+            "name": "Power BI",
+            "awarded_by": "Talento Tech / Ministerio de Educación CABA",
+            "year": 2026,
+            "image": "/img/certificates/power bi talento tech.jpg"
         },
         {
             "name": "Scrum Foundation",
             "awarded_by": "CertiProf",
-            "year": 2023
+            "year": 2023,
+            "image": "/img/certificates/Scrum Foundation.jpg"
         },
         {
             "name": "Python Essentials 1",
             "awarded_by": "Cisco Networking Academy",
-            "year": 2023
+            "year": 2023,
+            "image": "/img/certificates/python essentials 1.jpg"
         },
         {
             "name": "Python 3 - Beginner Level",
             "awarded_by": "UTN FRBA",
             "year": 2023,
-            "hours": 75
+            "hours": 75,
+            "image": "/img/certificates/Python 3 - nivel inicial.jpg"
         },
         {
             "name": "Web Development",
             "awarded_by": "Coderhouse",
             "year": 2021,
-            "hours": 38
+            "hours": 38,
+            "image": "/img/certificates/desarrollo web.jpg"
         },
         {
             "name": "Javascript",
             "awarded_by": "Coderhouse",
             "year": 2021,
-            "hours": 36
+            "hours": 36,
+            "image": "/img/certificates/javascript.jpg"
         },
         {
             "name": "Python",
             "awarded_by": "Coderhouse",
             "year": 2021,
-            "hours": 52
+            "hours": 52,
+            "image": "/img/certificates/python.jpg"
         },
         {
             "name": "AI Design and Deployment Module",
             "awarded_by": "UBA IALAB",
             "year": 2023,
             "hours": 200,
-            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence",
+            "image": "/img/certificates/Modulo diseño y despligue de IA.jpg"
         },
         {
             "name": "Data Governance Module",
             "awarded_by": "UBA IALAB",
             "year": 2023,
             "hours": 120,
-            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence",
+            "image": "/img/certificates/Modulo gobernanza de datos.jpg"
         },
         {
             "name": "Artificial Intelligence Governance",
             "awarded_by": "UBA IALAB",
             "year": 2023,
             "hours": 50,
-            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence",
+            "image": "/img/certificates/Gobernanza de la inteligencia artificial.jpg"
         },
         {
             "name": "Programming ABCs",
             "awarded_by": "UBA IALAB",
             "year": 2023,
             "hours": 20,
-            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence",
+            "image": "/img/certificates/abc de la programacion.jpg"
         },
         {
             "name": "Basic Multidisciplinary Program in Data and Artificial Intelligence Training",
             "awarded_by": "UBA IALAB",
             "year": 2022,
             "hours": 50,
-            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence"
+            "part_of": "Multidisciplinary Program in Data, Programming and Artificial Intelligence",
+            "image": "/img/certificates/programa basico en datos e IA.jpg"
         },
         {
             "name": "Programming Essentials in Python",
             "awarded_by": "ISPC",
             "year": 2023,
-            "hours": 75
+            "hours": 75,
+            "image": "/img/certificates/Programing essentials in python.jpg"
         },
         {
             "name": "Python Fundamentals Course",
             "awarded_by": "Platzi",
             "year": 2022,
-            "hours": 17
+            "hours": 17,
+            "image": "/img/certificates/curso de fundamentos de python.jpg"
         },
         {
             "name": "Introduction to Databases and SQL",
             "awarded_by": "EducaciónIT",
             "year": 2024,
-            "hours": 18
+            "hours": 18,
+            "image": "/img/certificates/introduccion a bases de datos y sql.jpeg"
         },
         {
             "name": "Python for Data Analysis",
             "awarded_by": "EducaciónIT",
             "year": 2024,
-            "hours": 18
+            "hours": 18,
+            "image": "/img/certificates/python para el analisis de datos.jpeg"
         },
         {
             "name": "Introduction to Artificial Intelligence and Prompt Engineering",
             "awarded_by": "EducaciónIT",
             "year": 2024,
-            "hours": 18
+            "hours": 18,
+            "image": "/img/certificates/introduccion a la IA y prompt engineering.jpeg"
         },
         {
             "name": "Introduction to Data Analysis with Python",
             "awarded_by": "Academia Desafío Latam",
-            "year": 2023
+            "year": 2023,
+            "image": "/img/certificates/introduccion al analisis de datos con python.jpg"
         },
         {
             "name": "Database Course with Python",
             "awarded_by": "Código Facilito",
             "year": 2024,
-            "hours": "6 hours 21 minutes"
+            "hours": "6 hours 21 minutes",
+            "image": "/img/certificates/curso de base de datos con python.jpg"
         },
         {
             "name": "Tools for Trainers",
             "awarded_by": "Asociación Gremial de Computación",
-            "year": 2024
+            "year": 2024,
+            "image": "/img/certificates/herramientas para formadores.jpg"
         },
         {
             "name": "Argentina Programa 4.0 - 1st Stage #SeProgramar",
             "awarded_by": "Ministry of Economy, Secretariat of Knowledge Economy, INTI",
-            "year": 2022
+            "year": 2022,
+            "image": "/img/certificates/argentina programa_se programar.jpg"
         }
     ],
+    "total_certifications": 28,
     "experience_education_development": [
         {
-            "position": "Python Professor (Freelance)",
-            "company": "Be Wise, Spain",
+            "position": "Python & Frameworks Instructor",
+            "company": "Be Wise (Spain / Argentina)",
             "contact": "Mr. Nahuel Silva Dassis +54 9 11 4974 5485",
-            "period": "April 2024 - Present",
+            "period": "April 2024 - September 2025",
             "tasks": [
-                "Practical classes at beginner and intermediate levels.",
-                "Focus on problem-solving and application development."
+                "Designed and delivered beginner and intermediate Python programs for over 30 professionals, achieving a 90% retention rate.",
+                "Trained a Nokia CTSS team in Python automation, reducing manual task time by 40%.",
+                "Developed materials focused on scripting, Pandas, and REST API consumption."
             ]
         },
         {
-            "position": "Development Tutor",
+            "position": "Python / Django / JavaScript Tutor",
             "company": "Coderhouse",
             "contact": "Franco Di Martino +54 9 280 4390162",
-            "period": "January 2022 - September 2024",
+            "period": "January 2022 - January 2025",
             "tasks": [
-                "Support for students in technologies such as Python, Django, and JavaScript.",
-                "Correction of exercises and guidance on integrated web projects."
+                "Guided over 150 students through full stack projects with Python, Django, and JavaScript — reviewing code, architecture, and databases.",
+                "Supported final projects applying clean code best practices, Git, and PostgreSQL modeling.",
+                "Average rating of 4.8/5 over 3 consecutive years."
             ]
         },
         {
@@ -174,25 +258,60 @@
             "company": "Junior Achievement Argentina",
             "period": "May 2022 - July 2022",
             "tasks": [
-                "National teacher training in web development.",
+                "Trained over 50 teachers nationwide in HTML5, CSS3, Bootstrap, and JavaScript.",
                 "Implementation of educational programs focused on programming."
             ]
         }
     ],
     "technical_skills": {
-        "languages": ["Python", "JavaScript", "SQL"],
-        "frameworks_and_tools": [
-            "Django",
+        "frontend": [
             "HTML5",
             "CSS3",
-            "Bootstrap",
+            "JavaScript",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Bootstrap"
+        ],
+        "backend": [
+            "Python",
+            "Django",
+            "REST APIs",
+            "Node.js (basic)"
+        ],
+        "databases": [
+            "PostgreSQL",
+            "SQL",
+            "NoSQL (Firebase)",
+            "Delta Lake"
+        ],
+        "data_and_bi": [
+            "Pandas",
+            "NumPy",
+            "Power BI",
+            "DAX",
+            "ETL/ELT",
+            "Data Modeling"
+        ],
+        "ai_and_tools": [
+            "Claude Code",
+            "ChatGPT",
+            "GitHub Copilot",
+            "Cursor",
+            "Prompt Engineering"
+        ],
+        "devops_and_deploy": [
             "Git",
             "GitHub",
-            "Artificial Intelligence (AI)",
-            "Prompt Engineering",
-            "Data Analysis"
+            "Vercel",
+            "Scrum",
+            "Jira",
+            "Trello"
         ],
-        "methodologies": ["Scrum (Agile)"],
+        "methodologies": [
+            "Scrum (Agile)"
+        ],
         "other": [
             "Tutoring",
             "technical training",
@@ -211,8 +330,38 @@
     ],
     "projects": [
         {
+            "name": "Personal Portfolio",
+            "description": "Complete professional portfolio designed and built from scratch, with bilingual mode (ES/EN), dynamic projects section, certifications, and experience. Deployed on Vercel.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS"
+            ],
+            "demo_url": "https://nicolasbarra.dev",
+            "repository_url": null,
+            "completion_date": "2025",
+            "status": "Completed",
+            "featured": true
+        },
+        {
+            "name": "3D Printing Store - niko3d",
+            "description": "Responsive online catalog with shopping cart (Context API) and WhatsApp order integration. Deployed on Vercel with a custom domain.",
+            "technologies": [
+                "Next.js 14",
+                "TypeScript",
+                "TailwindCSS",
+                "Context API"
+            ],
+            "demo_url": "https://niko3d.vercel.app",
+            "repository_url": null,
+            "completion_date": "2025",
+            "status": "Completed",
+            "featured": true
+        },
+        {
             "name": "Melisa Santoianni - Floral Coaching",
-            "description": "Professional website for floral coaching and emotional wellness. Features booking system, contact forms, responsive design and SEO optimizations. Built with modern web technologies and deployed on Vercel with integrated analytics.",
+            "description": "Real client project. Website with booking system, contact forms, performance optimizations, and SEO, with integrated analytics. In production since 2025.",
             "technologies": [
                 "HTML5",
                 "CSS3",
@@ -231,7 +380,7 @@
         },
         {
             "name": "Data Extraction, Processing and Storage - UTN",
-            "description": "Idempotent data pipeline with The News API. Extraction, transformation, and storage in Delta Lake (Bronze, Silver, Gold).",
+            "description": "Idempotent data pipeline with The News API. Extraction, transformation, and storage with a Bronze/Silver/Gold architecture using Delta Lake. Academic project with automated tests.",
             "technologies": [
                 "Python",
                 "Pandas",
@@ -249,7 +398,7 @@
         },
         {
             "name": "Exchange Rate Gap Monitor",
-            "description": "24/7 automatic monitoring application for the gap between official and MEP dollar rates in Argentina. Features instant alerts, historical visualization, and system notifications for traders, investors, and companies needing to make informed financial decisions.",
+            "description": "Desktop application with 24/7 automatic monitoring of the gap between official and MEP dollar rates in Argentina. Features instant alerts, historical visualization, and system notifications for traders, investors, and companies needing to make informed financial decisions.",
             "technologies": [
                 "Python",
                 "Tkinter",
@@ -265,7 +414,20 @@
             "repository_url": "https://github.com/nikobarra/brecha_oficial_mep",
             "completion_date": "2025",
             "status": "Completed",
-            "featured": true
+            "featured": true,
+            "primary": true
+        }
+    ],
+    "languages": [
+        {
+            "language": "Spanish",
+            "level": "Native"
+        },
+        {
+            "language": "English",
+            "level": "B1 Intermediate",
+            "certification": "EF SET Certificate, January 2026",
+            "note": "B2 technical reading"
         }
     ],
     "availability": {

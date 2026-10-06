@@ -1,8 +1,17 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+    createContext,
+    useContext,
+    useEffect,
+    useState,
+    ReactNode,
+} from "react";
+import { MotionConfig } from "framer-motion";
 
 type Language = "es" | "en";
+
+const STORAGE_KEY = "portfolio-language";
 
 interface LanguageContextType {
     language: Language;
@@ -30,9 +39,36 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 }) => {
     const [language, setLanguage] = useState<Language>("es");
 
+    // Al cargar: idioma guardado o, la primera vez, el del navegador
+    useEffect(() => {
+        let saved: string | null = null;
+        try {
+            saved = localStorage.getItem(STORAGE_KEY);
+        } catch {}
+        if (saved === "es" || saved === "en") {
+            setLanguage(saved);
+        } else if (!navigator.language.toLowerCase().startsWith("es")) {
+            setLanguage("en");
+        }
+    }, []);
+
+    // Mantener el idioma del documento sincronizado para lectores de pantalla
+    useEffect(() => {
+        document.documentElement.lang = language;
+    }, [language]);
+
+    const changeLanguage = (lang: Language) => {
+        setLanguage(lang);
+        try {
+            localStorage.setItem(STORAGE_KEY, lang);
+        } catch {}
+    };
+
     return (
-        <LanguageContext.Provider value={{ language, setLanguage }}>
-            {children}
+        <LanguageContext.Provider
+            value={{ language, setLanguage: changeLanguage }}
+        >
+            <MotionConfig reducedMotion="user">{children}</MotionConfig>
         </LanguageContext.Provider>
     );
 };

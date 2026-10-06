@@ -3,14 +3,23 @@ export const es = {
     header: {
         title: "Nicolás Pelecano",
         subtitle: "Desarrollador Full Stack",
+        downloadCV: "Descargar CV",
+        contact: "Contactar",
+    },
+
+    // Navegación
+    nav: {
+        perfil: "Perfil",
+        habilidades: "Habilidades",
+        experiencia: "Experiencia",
+        proyectos: "Proyectos",
+        educacion: "Educación",
+        certificaciones: "Certificaciones",
     },
 
     // Perfil
     perfil: {
         title: "Perfil",
-        description:
-            "Desarrollador Full Stack apasionado por crear soluciones innovadoras y experiencias de usuario excepcionales. Especializado en tecnologías modernas como React, Node.js y Python.",
-        downloadCV: "Descargar CV",
     },
 
     // Habilidades
@@ -24,6 +33,17 @@ export const es = {
         methodologies: "Metodologías",
         otherKnowledge: "Otros Conocimientos",
         softSkills: "Habilidades Blandas",
+        categories: {
+            frontend: "Frontend",
+            backend: "Backend",
+            databases: "Bases de datos",
+            data: "Datos y BI",
+            ai: "IA y herramientas",
+            devops: "DevOps y deploy",
+            methodologies: "Metodologías",
+            other: "Otros",
+        },
+        languagesSpoken: "Idiomas",
     },
 
     // Experiencia
@@ -63,6 +83,10 @@ export const es = {
         withHours: "Con horas",
         programs: "Programas",
         certifications: "certificaciones",
+        showAll: "Ver todas",
+        showLess: "Ver menos",
+        recent: "Más recientes",
+        hoursShort: "h",
     },
 
     // Proyectos
@@ -92,11 +116,14 @@ export const es = {
 
     // Common
     common: {
+        skipToContent: "Saltar al contenido",
         loading: "Cargando...",
         error: "Error",
         noData: "No hay datos disponibles",
         availability: "Disponibilidad",
         type: "Tipo",
         modality: "Modalidad",
+        menu: "Menú",
+        contact: "Contacto",
     },
 };

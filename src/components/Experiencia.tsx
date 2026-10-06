@@ -5,6 +5,10 @@ import { useTranslations } from "../hooks/useTranslations";
 import { useLanguage } from "../contexts/LanguageContext";
 import { getExperience } from "../utils/cvHelpers";
 
+// Muestra solo el nombre de la referencia; el teléfono queda en el JSON y en el CV.
+const referenceName = (contact: string) =>
+    contact.replace(/\s*\+?\d[\d\s-]{7,}$/, "").trim();
+
 const Experiencia = () => {
     const { t, cvData } = useTranslations();
     const { language } = useLanguage();
@@ -21,46 +25,46 @@ const Experiencia = () => {
                 {experience.map((exp, index) => (
                     <div
                         key={index}
-                        className="bg-neutral-900 p-6 rounded-lg border border-neutral-800 hover:border-orange-500 transition-colors"
+                        className="bg-surface p-6 rounded-lg border border-raised hover:border-accent transition-colors"
                     >
                         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                             <div>
                                 <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
                                     <Briefcase
                                         size={20}
-                                        className="text-orange-500"
+                                        className="text-accent"
                                     />
                                     {exp.position}
                                 </h3>
-                                <p className="text-lg text-orange-400 mb-1 flex items-center gap-2">
+                                <p className="text-lg text-accent-soft mb-1 flex items-center gap-2">
                                     <Building size={16} />
                                     {exp.company}
                                 </p>
-                                <p className="text-neutral-400 flex items-center gap-2">
+                                <p className="text-muted flex items-center gap-2">
                                     <Calendar size={16} />
                                     {exp.period}
                                 </p>
                                 {exp.contact && (
-                                    <p className="text-sm text-neutral-500 mt-1">
-                                        {t.experiencia.contact}: {exp.contact}
+                                    <p className="text-sm text-muted mt-1">
+                                        {t.experiencia.contact}: {referenceName(exp.contact)}
                                     </p>
                                 )}
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <h4 className="text-sm font-medium text-neutral-300 uppercase tracking-wide">
+                            <h4 className="text-sm font-medium text-soft uppercase tracking-wide">
                                 {t.experiencia.responsibilities}:
                             </h4>
                             <ul className="space-y-2">
                                 {exp.tasks.map((task, taskIndex) => (
                                     <li
                                         key={taskIndex}
-                                        className="flex items-start gap-2 text-neutral-300"
+                                        className="flex items-start gap-2 text-soft"
                                     >
                                         <CheckCircle
                                             size={16}
-                                            className="text-orange-500 mt-0.5 flex-shrink-0"
+                                            className="text-accent mt-0.5 flex-shrink-0"
                                         />
                                         <span>{task}</span>
                                     </li>

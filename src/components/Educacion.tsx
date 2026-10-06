@@ -21,28 +21,28 @@ const Educacion = () => {
                 {education.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-neutral-900 p-6 rounded-lg border border-neutral-800 hover:border-orange-500 transition-colors"
+                        className="bg-surface p-6 rounded-lg border border-raised hover:border-accent transition-colors"
                     >
                         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                                     <GraduationCap
                                         size={20}
-                                        className="text-orange-500"
+                                        className="text-accent"
                                     />
                                     {item.title}
                                 </h3>
-                                <p className="text-lg text-orange-400 mb-2">
+                                <p className="text-lg text-accent-soft mb-2">
                                     {item.institution}
                                 </p>
-                                <p className="text-neutral-400 flex items-center gap-2 mb-3">
+                                <p className="text-muted flex items-center gap-2 mb-3">
                                     <Calendar size={16} />
                                     {item.period}
                                 </p>
-                                <div className="flex items-center gap-2 text-sm text-neutral-300">
+                                <div className="flex items-center gap-2 text-sm text-soft">
                                     <Award
                                         size={16}
-                                        className="text-green-500"
+                                        className="text-accent-soft"
                                     />
                                     <span>{item.status}</span>
                                 </div>

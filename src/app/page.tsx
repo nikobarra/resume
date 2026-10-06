@@ -10,26 +10,26 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
-        <main className="flex flex-col min-h-screen bg-neutral-950 text-white">
+        <main className="flex flex-col min-h-screen bg-canvas text-white">
             <Navbar />
-            <div className="pt-16">
+            <div id="contenido" tabIndex={-1} className="pt-16 outline-none">
                 <Header />
                 <section id="perfil" className="py-12">
                     <Perfil />
                 </section>
-                <section id="habilidades" className="py-12 bg-neutral-900">
+                <section id="habilidades" className="py-12 bg-surface">
                     <Habilidades />
                 </section>
                 <section id="experiencia" className="py-12">
                     <Experiencia />
                 </section>
-                <section id="proyectos" className="py-12 bg-neutral-900">
+                <section id="proyectos" className="py-12 bg-surface">
                     <Proyectos />
                 </section>
                 <section id="educacion" className="py-12">
                     <Educacion />
                 </section>
-                <section id="certificaciones" className="py-12 bg-neutral-900">
+                <section id="certificaciones" className="py-12 bg-surface">
                     <Certificaciones />
                 </section>
             </div>

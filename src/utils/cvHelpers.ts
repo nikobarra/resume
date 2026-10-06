@@ -1,5 +1,8 @@
 import { CVDataEs, CVDataEn } from "../types/cv";
 
+export const toUrl = (value: string) =>
+    value.startsWith("http") ? value : `https://${value}`;
+
 export const getPersonalInfo = (
     cvData: CVDataEs | CVDataEn,
     language: "es" | "en"
@@ -8,6 +11,10 @@ export const getPersonalInfo = (
         const data = cvData as CVDataEs;
         return {
             name: data.informacion_personal.nombre_completo,
+            title: data.informacion_personal.titulo_profesional,
+            website: data.informacion_personal.sitio_web,
+            github: data.informacion_personal.github,
+            linkedin: data.informacion_personal.linkedin,
             phone: data.informacion_personal.telefono,
             email: data.informacion_personal.correo_electronico,
             location: data.informacion_personal.ubicacion,
@@ -16,6 +23,10 @@ export const getPersonalInfo = (
         const data = cvData as CVDataEn;
         return {
             name: data.personal_information.full_name,
+            title: data.personal_information.professional_title,
+            website: data.personal_information.website,
+            github: data.personal_information.github,
+            linkedin: data.personal_information.linkedin,
             phone: data.personal_information.phone,
             email: data.personal_information.email,
             location: data.personal_information.location,
@@ -67,8 +78,11 @@ export const getCertifications = (
             name: cert.nombre,
             awarded_by: cert.otorgado_por,
             year: cert.anio,
+            month: cert.mes,
             hours: cert.horas,
+            grade: cert.calificacion,
             part_of: cert.parte_de,
+            image: cert.imagen,
         }));
     } else {
         const data = (cvData as CVDataEn).relevant_certifications;
@@ -76,8 +90,11 @@ export const getCertifications = (
             name: cert.name,
             awarded_by: cert.awarded_by,
             year: cert.year,
+            month: cert.month,
             hours: cert.hours,
+            grade: cert.grade,
             part_of: cert.part_of,
+            image: cert.image,
         }));
     }
 };
@@ -114,20 +131,17 @@ export const getTechnicalSkills = (
     if (language === "es") {
         const data = (cvData as CVDataEs).conocimientos_tecnicos;
         return {
-            languages: data.lenguajes,
-            frameworks_and_tools: data.frameworks_y_herramientas,
+            frontend: data.frontend,
+            backend: data.backend,
+            databases: data.bases_de_datos,
+            data_and_bi: data.datos_y_bi,
+            ai_and_tools: data.ia_y_herramientas,
+            devops_and_deploy: data.devops_y_deploy,
             methodologies: data.metodologias,
             other: data.otros,
         };
-    } else {
-        const data = (cvData as CVDataEn).technical_skills;
-        return {
-            languages: data.languages,
-            frameworks_and_tools: data.frameworks_and_tools,
-            methodologies: data.methodologies,
-            other: data.other,
-        };
     }
+    return (cvData as CVDataEn).technical_skills;
 };
 
 export const getSoftSkills = (
@@ -157,6 +171,7 @@ export const getProjects = (
             completion_date: project.fecha_finalizacion,
             status: project.estado,
             featured: project.destacado,
+            primary: project.principal ?? false,
         }));
     } else {
         const data = (cvData as CVDataEn).projects;
@@ -170,6 +185,7 @@ export const getProjects = (
             completion_date: project.completion_date,
             status: project.status,
             featured: project.featured,
+            primary: project.primary ?? false,
         }));
     }
 };
@@ -191,4 +207,19 @@ export const getAvailability = (
             modality: data.modality,
         };
     }
+};
+
+export const getLanguages = (
+    cvData: CVDataEs | CVDataEn,
+    language: "es" | "en"
+) => {
+    if (language === "es") {
+        return (cvData as CVDataEs).idiomas.map((l) => ({
+            language: l.idioma,
+            level: l.nivel,
+            certification: l.certificacion,
+            note: l.nota,
+        }));
+    }
+    return (cvData as CVDataEn).languages;
 };

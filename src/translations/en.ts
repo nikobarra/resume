@@ -3,14 +3,23 @@ export const en = {
     header: {
         title: "Nicolás Pelecano",
         subtitle: "Full Stack Developer",
+        downloadCV: "Download CV",
+        contact: "Contact me",
+    },
+
+    // Navegación
+    nav: {
+        perfil: "Profile",
+        habilidades: "Skills",
+        experiencia: "Experience",
+        proyectos: "Projects",
+        educacion: "Education",
+        certificaciones: "Certifications",
     },
 
     // Perfil
     perfil: {
         title: "Profile",
-        description:
-            "Full Stack Developer passionate about creating innovative solutions and exceptional user experiences. Specialized in modern technologies such as React, Node.js and Python.",
-        downloadCV: "Download CV",
     },
 
     // Habilidades
@@ -24,6 +33,17 @@ export const en = {
         methodologies: "Methodologies",
         otherKnowledge: "Other Knowledge",
         softSkills: "Soft Skills",
+        categories: {
+            frontend: "Frontend",
+            backend: "Backend",
+            databases: "Databases",
+            data: "Data & BI",
+            ai: "AI & tools",
+            devops: "DevOps & deploy",
+            methodologies: "Methodologies",
+            other: "Other",
+        },
+        languagesSpoken: "Languages",
     },
 
     // Experiencia
@@ -63,6 +83,10 @@ export const en = {
         withHours: "With hours",
         programs: "Programs",
         certifications: "certifications",
+        showAll: "Show all",
+        showLess: "Show less",
+        recent: "Most recent",
+        hoursShort: "h",
     },
 
     // Proyectos
@@ -92,11 +116,14 @@ export const en = {
 
     // Common
     common: {
+        skipToContent: "Skip to content",
         loading: "Loading...",
         error: "Error",
         noData: "No data available",
         availability: "Availability",
         type: "Type",
         modality: "Modality",
+        menu: "Menu",
+        contact: "Contact",
     },
 };

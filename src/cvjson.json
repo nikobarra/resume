@@ -1,17 +1,27 @@
 {
     "informacion_personal": {
         "nombre_completo": "Nicolás Matías Barra Pelecano",
-        "telefono": "+54 2266-440616",
+        "titulo_profesional": "Desarrollador Full Stack · Python & Data Engineering · Primer rol en la industria",
+        "telefono": "+54 9 2266440616",
         "correo_electronico": "nicolasbarrapelecano@gmail.com",
+        "sitio_web": "nicolasbarra.dev",
+        "github": "github.com/nikobarra",
+        "linkedin": "linkedin.com/in/nicolaspelecano",
         "ubicacion": "Mar del Plata, Buenos Aires"
     },
-    "perfil_profesional": "Soy un entusiasta de la tecnología con una fuerte orientación hacia el análisis y la ingeniería de datos, actualmente cursando la Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial. Poseo una sólida base en Python y SQL, con experiencia en programación y desarrollo de proyectos. Busco mi primera oportunidad laboral en el sector IT como Ingeniero de Datos o Analista de Datos, motivado por aprender, crecer profesionalmente y aplicar mis conocimientos en un entorno de innovación y gestión de datos.",
+    "perfil_profesional": "Desarrollador con sólidos fundamentos técnicos y proyectos reales en producción, buscando mi primer rol profesional en la industria. Mi camino en el desarrollo viene de la docencia técnica — 3 años formando más de 200 estudiantes en Python, Django y JavaScript me dieron una comprensión profunda del código limpio, la arquitectura de proyectos y las buenas prácticas. Construí sitios web para clientes reales, pipelines de datos y aplicaciones propias. Actualmente cursando Tecnicatura en Programación en UTN y con más de 800 horas de formación certificada en Python, IA y Data Engineering.",
     "educacion": [
+        {
+            "titulo": "Tecnicatura Universitaria en Programación",
+            "institucion": "Universidad Tecnológica Nacional (UTN), Mar del Plata",
+            "periodo": "En curso (desde marzo 2026)",
+            "estado": "En curso"
+        },
         {
             "titulo": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
             "institucion": "ISFT N° 204, Mar del Plata",
-            "periodo": "Desde marzo 2025 (Primer año en curso)",
-            "estado": "Todas las materias cursadas hasta el momento han sido promocionadas."
+            "periodo": "Desde marzo 2025",
+            "estado": "1er año aprobado con excelencia"
         },
         {
             "titulo": "Técnico en computación",
@@ -22,151 +32,225 @@
     ],
     "certificaciones_relevantes": [
         {
+            "nombre": "Diplomatura en Inteligencia Artificial para No Programadores",
+            "otorgado_por": "UTN FRBA",
+            "anio": 2026,
+            "mes": "Febrero",
+            "horas": 36,
+            "imagen": "/img/certificates/diplomatura IA para no programadores.jpg"
+        },
+        {
+            "nombre": "IA responsable",
+            "otorgado_por": "Aleph (Digital Ad Expert)",
+            "anio": 2026,
+            "mes": "Septiembre",
+            "imagen": "/img/certificates/IA responsable.jpg"
+        },
+        {
+            "nombre": "Introduction to Data Science",
+            "otorgado_por": "Cisco Networking Academy",
+            "anio": 2026,
+            "mes": "Marzo",
+            "imagen": "/img/certificates/introduction to data science.jpg"
+        },
+        {
+            "nombre": "Introducción a SQL",
+            "otorgado_por": "Accenture · Learning to Earning",
+            "anio": 2026,
+            "mes": "Febrero",
+            "horas": 4.7,
+            "imagen": "/img/certificates/accenture introduccion a sql.jpg"
+        },
+        {
+            "nombre": "Diplomatura en Python",
+            "otorgado_por": "UTN FRBA",
+            "anio": 2023,
+            "horas": 225,
+            "calificacion": "Sobresaliente"
+        },
+        {
             "nombre": "Ingenieria de datos",
             "otorgado_por": "UTN FRBA",
             "anio": 2025,
-            "horas": 60
+            "horas": 60,
+            "imagen": "/img/certificates/Data Engineering - utn 2025.jpg"
+        },
+        {
+            "nombre": "Claude Code in Action",
+            "otorgado_por": "Anthropic",
+            "anio": 2026,
+            "mes": "Marzo",
+            "imagen": "/img/certificates/claude code in action.jpg"
+        },
+        {
+            "nombre": "Power BI",
+            "otorgado_por": "Talento Tech / Ministerio de Educación CABA",
+            "anio": 2026,
+            "imagen": "/img/certificates/power bi talento tech.jpg"
         },
         {
             "nombre": "Scrum Foundation",
             "otorgado_por": "CertiProf",
-            "anio": 2023
+            "anio": 2023,
+            "imagen": "/img/certificates/Scrum Foundation.jpg"
         },
         {
             "nombre": "Python Essentials 1",
             "otorgado_por": "Cisco Networking Academy",
-            "anio": 2023
+            "anio": 2023,
+            "imagen": "/img/certificates/python essentials 1.jpg"
         },
         {
             "nombre": "Python 3 - Nivel Inicial",
             "otorgado_por": "UTN FRBA",
             "anio": 2023,
-            "horas": 75
+            "horas": 75,
+            "imagen": "/img/certificates/Python 3 - nivel inicial.jpg"
         },
         {
             "nombre": "Desarrollo Web",
             "otorgado_por": "Coderhouse",
             "anio": 2021,
-            "horas": 38
+            "horas": 38,
+            "imagen": "/img/certificates/desarrollo web.jpg"
         },
         {
             "nombre": "Javascript",
             "otorgado_por": "Coderhouse",
             "anio": 2021,
-            "horas": 36
+            "horas": 36,
+            "imagen": "/img/certificates/javascript.jpg"
         },
         {
             "nombre": "Python",
             "otorgado_por": "Coderhouse",
             "anio": 2021,
-            "horas": 52
+            "horas": 52,
+            "imagen": "/img/certificates/python.jpg"
         },
         {
             "nombre": "Módulo Diseño y Despliegue de IA",
             "otorgado_por": "UBA IALAB",
             "anio": 2023,
             "horas": 200,
-            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial",
+            "imagen": "/img/certificates/Modulo diseño y despligue de IA.jpg"
         },
         {
             "nombre": "Módulo Gobernanza de Datos",
             "otorgado_por": "UBA IALAB",
             "anio": 2023,
             "horas": 120,
-            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial",
+            "imagen": "/img/certificates/Modulo gobernanza de datos.jpg"
         },
         {
             "nombre": "Gobernanza de la Inteligencia Artificial",
             "otorgado_por": "UBA IALAB",
             "anio": 2023,
             "horas": 50,
-            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial",
+            "imagen": "/img/certificates/Gobernanza de la inteligencia artificial.jpg"
         },
         {
             "nombre": "ABC de Programación",
             "otorgado_por": "UBA IALAB",
             "anio": 2023,
             "horas": 20,
-            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial",
+            "imagen": "/img/certificates/abc de la programacion.jpg"
         },
         {
             "nombre": "Programa Básico Multidisciplinario de Formación en Datos e Inteligencia Artificial",
             "otorgado_por": "UBA IALAB",
             "anio": 2022,
             "horas": 50,
-            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial"
+            "parte_de": "Programa Multidisciplinario en Datos, Programación e Inteligencia Artificial",
+            "imagen": "/img/certificates/programa basico en datos e IA.jpg"
         },
         {
             "nombre": "Programing Essentials in Python",
             "otorgado_por": "ISPC",
             "anio": 2023,
-            "horas": 75
+            "horas": 75,
+            "imagen": "/img/certificates/Programing essentials in python.jpg"
         },
         {
             "nombre": "Curso de Fundamentos de Python",
             "otorgado_por": "Platzi",
             "anio": 2022,
-            "horas": 17
+            "horas": 17,
+            "imagen": "/img/certificates/curso de fundamentos de python.jpg"
         },
         {
             "nombre": "Introducción a Bases de Datos y SQL",
             "otorgado_por": "EducaciónIT",
             "anio": 2024,
-            "horas": 18
+            "horas": 18,
+            "imagen": "/img/certificates/introduccion a bases de datos y sql.jpeg"
         },
         {
             "nombre": "Python para Análisis de Datos",
             "otorgado_por": "EducaciónIT",
             "anio": 2024,
-            "horas": 18
+            "horas": 18,
+            "imagen": "/img/certificates/python para el analisis de datos.jpeg"
         },
         {
             "nombre": "Introducción a la inteligencia artificial y Prompt Engineering",
             "otorgado_por": "EducaciónIT",
             "anio": 2024,
-            "horas": 18
+            "horas": 18,
+            "imagen": "/img/certificates/introduccion a la IA y prompt engineering.jpeg"
         },
         {
             "nombre": "Introducción al Análisis de datos con Python",
             "otorgado_por": "Academia Desafío Latam",
-            "anio": 2023
+            "anio": 2023,
+            "imagen": "/img/certificates/introduccion al analisis de datos con python.jpg"
         },
         {
             "nombre": "Curso de base de datos con Python",
             "otorgado_por": "Código Facilito",
             "anio": 2024,
-            "horas": "6 horas 21 minutos"
+            "horas": "6 horas 21 minutos",
+            "imagen": "/img/certificates/curso de base de datos con python.jpg"
         },
         {
             "nombre": "Herramientas para Formadores",
             "otorgado_por": "Asociación Gremial de Computación",
-            "anio": 2024
+            "anio": 2024,
+            "imagen": "/img/certificates/herramientas para formadores.jpg"
         },
         {
             "nombre": "Argentina Programa 4.0 - 1° Etapa #SeProgramar",
             "otorgado_por": "Ministerio de Economía, Secretaría de Economía del Conocimiento, INTI",
-            "anio": 2022
+            "anio": 2022,
+            "imagen": "/img/certificates/argentina programa_se programar.jpg"
         }
     ],
+    "total_certificaciones": 28,
     "experiencia_educacion_desarrollo": [
         {
-            "puesto": "Profesor de Python (Freelance)",
-            "empresa": "Be Wise, España",
+            "puesto": "Profesor Python & Frameworks",
+            "empresa": "Be Wise (España / Argentina)",
             "contacto": "Sr. Nahuel Silva Dassis +54 9 11 4974 5485",
-            "periodo": "Abril 2024 - Actualidad",
+            "periodo": "Abril 2024 - Septiembre 2025",
             "tareas": [
-                "Clases prácticas de nivel inicial e intermedio.",
-                "Enfoque en resolución de problemas y desarrollo de aplicaciones."
+                "Diseñé y dicté programas de Python inicial e intermedio para más de 30 profesionales, logrando 90% de retención.",
+                "Capacité un equipo de Nokia CTSS en automatización con Python, reduciendo tiempos de tareas manuales en un 40%.",
+                "Desarrollé materiales con foco en scripting, Pandas y consumo de APIs REST."
             ]
         },
         {
-            "puesto": "Tutor de Desarrollo",
+            "puesto": "Tutor Python / Django / JavaScript",
             "empresa": "Coderhouse",
             "contacto": "Franco Di Martino +54 9 280 4390162",
-            "periodo": "Enero 2022 - Septiembre 2024",
+            "periodo": "Enero 2022 - Enero 2025",
             "tareas": [
-                "Acompañamiento a estudiantes en tecnologías como Python, Django y JavaScript.",
-                "Corrección de ejercicios y guía en proyectos web integrales."
+                "Guié a más de 150 estudiantes en proyectos full stack con Python, Django y JavaScript — revisando código, arquitectura y bases de datos.",
+                "Acompañé proyectos finales aplicando buenas prácticas de código limpio, Git y modelado con PostgreSQL.",
+                "Calificación promedio de 4.8/5 durante 3 años consecutivos."
             ]
         },
         {
@@ -174,25 +258,60 @@
             "empresa": "Junior Achievement Argentina",
             "periodo": "Mayo 2022 - Julio 2022",
             "tareas": [
-                "Capacitación docente a nivel nacional en desarrollo web.",
+                "Capacité a más de 50 docentes a nivel nacional en HTML5, CSS3, Bootstrap y JavaScript.",
                 "Implementación de programas educativos orientados a programación."
             ]
         }
     ],
     "conocimientos_tecnicos": {
-        "lenguajes": ["Python", "JavaScript", "SQL"],
-        "frameworks_y_herramientas": [
-            "Django",
+        "frontend": [
             "HTML5",
             "CSS3",
-            "Bootstrap",
+            "JavaScript",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Bootstrap"
+        ],
+        "backend": [
+            "Python",
+            "Django",
+            "APIs REST",
+            "Node.js (básico)"
+        ],
+        "bases_de_datos": [
+            "PostgreSQL",
+            "SQL",
+            "NoSQL (Firebase)",
+            "Delta Lake"
+        ],
+        "datos_y_bi": [
+            "Pandas",
+            "NumPy",
+            "Power BI",
+            "DAX",
+            "ETL/ELT",
+            "Data Modeling"
+        ],
+        "ia_y_herramientas": [
+            "Claude Code",
+            "ChatGPT",
+            "GitHub Copilot",
+            "Cursor",
+            "Prompt Engineering"
+        ],
+        "devops_y_deploy": [
             "Git",
             "GitHub",
-            "Inteligencia Artificial (IA)",
-            "Prompt Engineering",
-            "Análisis de Datos"
+            "Vercel",
+            "Scrum",
+            "Jira",
+            "Trello"
         ],
-        "metodologias": ["Scrum (Agile)"],
+        "metodologias": [
+            "Scrum (Agile)"
+        ],
         "otros": [
             "Tutoría",
             "formación técnica",
@@ -211,8 +330,38 @@
     ],
     "proyectos": [
         {
+            "nombre": "Portfolio Personal",
+            "descripcion": "Portfolio profesional completo diseñado y desarrollado de cero, con modo bilingüe (ES/EN), sección de proyectos dinámica, certificaciones y experiencia. Desplegado en Vercel.",
+            "tecnologias": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS"
+            ],
+            "url_demo": "https://nicolasbarra.dev",
+            "url_repositorio": null,
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true
+        },
+        {
+            "nombre": "Tienda de Impresión 3D - niko3d",
+            "descripcion": "Catálogo online responsive con carrito de compras (Context API) e integración de pedidos por WhatsApp. Desplegado en Vercel con dominio propio.",
+            "tecnologias": [
+                "Next.js 14",
+                "TypeScript",
+                "TailwindCSS",
+                "Context API"
+            ],
+            "url_demo": "https://niko3d.vercel.app",
+            "url_repositorio": null,
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true
+        },
+        {
             "nombre": "Melisa Santoianni - Coaching Floral",
-            "descripcion": "Sitio web profesional para coaching floral y bienestar emocional. Incluye sistema de reservas, formularios de contacto, diseño responsive y optimizaciones SEO. Desarrollado con tecnologías web modernas y desplegado en Vercel con analytics integrado.",
+            "descripcion": "Proyecto real para cliente. Sitio web con sistema de reservas, formularios de contacto, optimizaciones de rendimiento y SEO, con analytics integrado. En producción desde 2025.",
             "tecnologias": [
                 "HTML5",
                 "CSS3",
@@ -231,7 +380,7 @@
         },
         {
             "nombre": "Extracción, Procesamiento y Almacenamiento de Datos - UTN",
-            "descripcion": "Pipeline de datos idempotente con The News API. Extracción, transformación y almacenamiento en Delta Lake (Bronze, Silver, Gold).",
+            "descripcion": "Pipeline idempotente de extracción, transformación y almacenamiento de datos con The News API. Arquitectura Bronze/Silver/Gold con Delta Lake. Proyecto académico con pruebas automatizadas.",
             "tecnologias": [
                 "Python",
                 "Pandas",
@@ -249,7 +398,7 @@
         },
         {
             "nombre": "Monitor de Brecha Cambiaria",
-            "descripcion": "Aplicación de monitoreo automático 24/7 de la brecha entre dólar oficial y MEP en Argentina. Incluye alertas instantáneas, visualización histórica y notificaciones del sistema para traders, inversores y empresas que necesitan tomar decisiones financieras informadas.",
+            "descripcion": "Aplicación de escritorio con monitoreo automático 24/7 de la brecha entre dólar oficial y MEP en Argentina. Incluye alertas instantáneas, visualización histórica y notificaciones del sistema para traders, inversores y empresas que necesitan tomar decisiones financieras informadas.",
             "tecnologias": [
                 "Python",
                 "Tkinter",
@@ -265,7 +414,20 @@
             "url_repositorio": "https://github.com/nikobarra/brecha_oficial_mep",
             "fecha_finalizacion": "2025",
             "estado": "Completado",
-            "destacado": true
+            "destacado": true,
+            "principal": true
+        }
+    ],
+    "idiomas": [
+        {
+            "idioma": "Español",
+            "nivel": "Nativo"
+        },
+        {
+            "idioma": "Inglés",
+            "nivel": "B1 Intermedio",
+            "certificacion": "EF SET Certificate, enero 2026",
+            "nota": "Lectura técnica B2"
         }
     ],
     "disponibilidad": {

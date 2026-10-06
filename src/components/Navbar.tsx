@@ -1,60 +1,59 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "../hooks/useTranslations";
+import { useLanguage } from "../contexts/LanguageContext";
+import { getPersonalInfo } from "../utils/cvHelpers";
 import LanguageSwitch from "./LanguageSwitch";
+import { useDialogFocus } from "../hooks/useDialogFocus";
 
 const Navbar = () => {
-    const { t } = useTranslations();
+    const { t, cvData } = useTranslations();
+    const { language } = useLanguage();
+    const info = getPersonalInfo(cvData, language);
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("");
 
+    const menuRef = useRef<HTMLDivElement>(null);
+    const closeMenu = useCallback(() => setIsOpen(false), []);
+    useDialogFocus(isOpen, menuRef, closeMenu);
+
     // Detectar scroll para cambiar el estilo de la navbar
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener("scroll", handleScroll);
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Detectar sección activa
+    // Detectar sección activa: la que cruza la franja superior del viewport
     useEffect(() => {
-        const handleScrollSpy = () => {
-            const sections = document.querySelectorAll("section[id]");
-            const scrollPos = window.scrollY + 100;
-
-            sections.forEach((section) => {
-                const sectionTop = (section as HTMLElement).offsetTop;
-                const sectionHeight = (section as HTMLElement).offsetHeight;
-                const sectionId = section.getAttribute("id");
-
-                if (
-                    scrollPos >= sectionTop &&
-                    scrollPos < sectionTop + sectionHeight
-                ) {
-                    setActiveSection(sectionId || "");
-                }
-            });
-        };
-
-        window.addEventListener("scroll", handleScrollSpy);
-        return () => window.removeEventListener("scroll", handleScrollSpy);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) setActiveSection(entry.target.id);
+                });
+            },
+            { rootMargin: "-80px 0px -70% 0px" }
+        );
+        document
+            .querySelectorAll("section[id]")
+            .forEach((section) => observer.observe(section));
+        return () => observer.disconnect();
     }, []);
 
     const navItems = [
-        { id: "perfil", label: t.perfil.title, href: "#perfil" },
-        { id: "habilidades", label: t.habilidades.title, href: "#habilidades" },
-        { id: "experiencia", label: t.experiencia.title, href: "#experiencia" },
-        { id: "proyectos", label: t.proyectos.title, href: "#proyectos" },
-        { id: "educacion", label: t.educacion.title, href: "#educacion" },
+        { id: "perfil", label: t.nav.perfil, href: "#perfil" },
+        { id: "habilidades", label: t.nav.habilidades, href: "#habilidades" },
+        { id: "experiencia", label: t.nav.experiencia, href: "#experiencia" },
+        { id: "proyectos", label: t.nav.proyectos, href: "#proyectos" },
+        { id: "educacion", label: t.nav.educacion, href: "#educacion" },
         {
             id: "certificaciones",
-            label: t.certificaciones.title,
+            label: t.nav.certificaciones,
             href: "#certificaciones",
         },
     ];
@@ -62,21 +61,33 @@ const Navbar = () => {
     const scrollToSection = (href: string) => {
         const element = document.querySelector(href);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            const reduceMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+            element.scrollIntoView({
+                behavior: reduceMotion ? "auto" : "smooth",
+            });
         }
         setIsOpen(false);
     };
 
     return (
         <>
+            <a
+                href="#contenido"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:px-4 focus:py-3 focus:rounded-lg focus:bg-accent focus:text-black focus:font-semibold"
+            >
+                {t.common.skipToContent}
+            </a>
+
             {/* Navbar fija */}
             <motion.nav
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
                     isScrolled
-                        ? "bg-neutral-900/95 backdrop-blur-md border-b border-neutral-800"
-                        : "bg-transparent"
+                        ? "bg-surface/95 backdrop-blur-md border-b border-raised"
+                        : "bg-canvas"
                 }`}
             >
                 <div className="max-w-6xl mx-auto px-4">
@@ -86,35 +97,35 @@ const Navbar = () => {
                             whileHover={{ scale: 1.05 }}
                             className="flex items-center space-x-3"
                         >
-                            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">
+                            <div className="w-8 h-8 bg-accent rounded-full shrink-0 flex items-center justify-center">
+                                <span className="text-black font-bold text-sm">
                                     N
                                 </span>
                             </div>
-                            <span className="text-white font-semibold text-lg">
+                            <span className="text-white font-semibold text-lg whitespace-nowrap">
                                 Nicolás Barra
                             </span>
                         </motion.div>
 
                         {/* Navegación desktop */}
-                        <div className="hidden md:flex items-center space-x-8">
+                        <div className="hidden lg:flex items-center gap-1">
                             {navItems.map((item) => (
                                 <motion.button
                                     key={item.id}
                                     whileHover={{ y: -2 }}
                                     whileTap={{ scale: 0.95 }}
                                     onClick={() => scrollToSection(item.href)}
-                                    className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    className={`relative px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
                                         activeSection === item.id
-                                            ? "text-orange-400"
-                                            : "text-neutral-300 hover:text-white"
+                                            ? "text-accent-soft"
+                                            : "text-soft hover:text-white"
                                     }`}
                                 >
                                     {item.label}
                                     {activeSection === item.id && (
                                         <motion.div
                                             layoutId="activeSection"
-                                            className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-400"
+                                            className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-soft"
                                             initial={false}
                                             transition={{
                                                 type: "spring",
@@ -135,8 +146,10 @@ const Navbar = () => {
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
+                                aria-label={t.common.menu}
+                                aria-expanded={isOpen}
                                 onClick={() => setIsOpen(!isOpen)}
-                                className="md:hidden p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 transition-colors"
+                                className="lg:hidden p-3 rounded-lg bg-raised hover:bg-line transition-colors"
                             >
                                 <AnimatePresence mode="wait">
                                     {isOpen ? (
@@ -183,7 +196,7 @@ const Navbar = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-40 md:hidden"
+                        className="fixed inset-0 z-40 lg:hidden"
                     >
                         {/* Overlay */}
                         <motion.div
@@ -196,6 +209,10 @@ const Navbar = () => {
 
                         {/* Menú */}
                         <motion.div
+                            ref={menuRef}
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label={t.common.menu}
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
@@ -204,18 +221,19 @@ const Navbar = () => {
                                 damping: 25,
                                 stiffness: 300,
                             }}
-                            className="absolute right-0 top-0 h-full w-80 bg-neutral-900 border-l border-neutral-800"
+                            className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-surface border-l border-raised"
                         >
                             <div className="p-6">
                                 <div className="flex items-center justify-between mb-8">
                                     <h2 className="text-xl font-bold text-white">
-                                        Menú
+                                        {t.common.menu}
                                     </h2>
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-                                        onClick={() => setIsOpen(false)}
-                                        className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 transition-colors"
+                                        onClick={closeMenu}
+                                        aria-label={t.certificaciones.close}
+                                        className="p-3 rounded-lg bg-raised hover:bg-line transition-colors"
                                     >
                                         <X size={20} className="text-white" />
                                     </motion.button>
@@ -235,8 +253,8 @@ const Navbar = () => {
                                             }
                                             className={`w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 ${
                                                 activeSection === item.id
-                                                    ? "bg-orange-500/20 text-orange-400 border-l-4 border-orange-500"
-                                                    : "text-neutral-300 hover:text-white hover:bg-neutral-800"
+                                                    ? "bg-accent/20 text-accent-soft"
+                                                    : "text-soft hover:text-white hover:bg-raised"
                                             }`}
                                         >
                                             {item.label}
@@ -245,14 +263,14 @@ const Navbar = () => {
                                 </nav>
 
                                 {/* Información adicional en móvil */}
-                                <div className="mt-8 pt-8 border-t border-neutral-800">
-                                    <h3 className="text-sm font-medium text-neutral-400 mb-4">
-                                        Contacto
+                                <div className="mt-8 pt-8 border-t border-raised">
+                                    <h3 className="text-sm font-medium text-muted mb-4">
+                                        {t.common.contact}
                                     </h3>
-                                    <div className="space-y-2 text-sm text-neutral-300">
-                                        <p>nicolasbarrapelecano@gmail.com</p>
-                                        <p>+54 2266-440616</p>
-                                        <p>Mar del Plata, Buenos Aires</p>
+                                    <div className="space-y-2 text-sm text-soft">
+                                        <p>{info.email}</p>
+                                        <p>{info.phone}</p>
+                                        <p>{info.location}</p>
                                     </div>
                                 </div>
                             </div>

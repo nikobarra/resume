@@ -18,7 +18,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-surface border-t border-raised text-white py-8">
+        <footer className="bg-surface border-t border-raised text-paper py-8">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     {/* Información del desarrollador */}

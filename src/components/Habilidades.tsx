@@ -43,7 +43,7 @@ const Habilidades = () => {
 
     return (
         <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-white mb-10 text-center">
+            <h2 className="text-3xl font-bold text-paper mb-10">
                 {t.habilidades.title}
             </h2>
 
@@ -77,7 +77,7 @@ const Habilidades = () => {
                         <ul className="space-y-2 text-soft text-sm">
                             {languages.map((l) => (
                                 <li key={l.language}>
-                                    <span className="text-white font-medium">
+                                    <span className="text-paper font-medium">
                                         {l.language}
                                     </span>{" "}
                                     · {l.level}

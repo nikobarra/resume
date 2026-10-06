@@ -17,7 +17,7 @@ const Links = ({ project }: { project: Project }) => {
                     href={project.demo_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 bg-accent hover:bg-accent-soft text-black px-3 min-h-11 rounded text-sm font-semibold transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 bg-accent hover:bg-accent-soft text-canvas px-3 min-h-11 rounded-lg text-sm font-semibold transition-colors active:scale-[0.98]"
                 >
                     <Eye size={16} />
                     {t.proyectos.demo}
@@ -28,7 +28,7 @@ const Links = ({ project }: { project: Project }) => {
                     href={project.repository_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 bg-line hover:bg-line-strong text-white px-3 min-h-11 rounded text-sm font-medium transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 bg-line hover:bg-line-strong text-paper px-3 min-h-11 rounded-lg text-sm font-medium transition-colors active:scale-[0.98]"
                 >
                     <Github size={16} />
                     {t.proyectos.repository}
@@ -69,7 +69,7 @@ const Proyectos = () => {
 
     return (
         <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-paper mb-8">
                 {t.proyectos.title}
             </h2>
 
@@ -104,7 +104,7 @@ const Proyectos = () => {
                                         {primary.completion_date}
                                     </span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">
+                                <h3 className="text-2xl font-bold text-paper">
                                     {primary.name}
                                 </h3>
                                 <p className="text-soft leading-relaxed">
@@ -137,7 +137,7 @@ const Proyectos = () => {
                                 )}
                                 <div className="p-6 flex flex-col gap-4 flex-1">
                                     <div className="flex items-start justify-between gap-3">
-                                        <h3 className="text-xl font-semibold text-white">
+                                        <h3 className="text-xl font-semibold text-paper">
                                             {project.name}
                                         </h3>
                                         <span className="inline-flex items-center gap-1 text-xs text-muted shrink-0 mt-1">

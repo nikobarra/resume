@@ -25,8 +25,8 @@ const LanguageSwitch = () => {
                     aria-label={name}
                     className={`min-w-11 min-h-11 px-3 text-xs font-semibold rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-soft ${
                         language === code
-                            ? "bg-accent text-black"
-                            : "text-soft hover:text-white"
+                            ? "bg-accent text-canvas"
+                            : "text-soft hover:text-paper"
                     }`}
                 >
                     {label}

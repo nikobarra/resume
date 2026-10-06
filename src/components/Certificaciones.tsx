@@ -36,8 +36,8 @@ const Certificaciones = () => {
 
     return (
         <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold text-white mb-2">
+            <div className="mb-10">
+                <h2 className="text-3xl font-bold text-paper mb-2">
                     {t.certificaciones.title}
                 </h2>
                 <p className="text-muted">
@@ -57,7 +57,7 @@ const Certificaciones = () => {
                                 size={20}
                                 className="text-accent mt-0.5 shrink-0"
                             />
-                            <h3 className="font-semibold text-white leading-snug">
+                            <h3 className="font-semibold text-paper leading-snug">
                                 {cert.name}
                             </h3>
                         </div>
@@ -100,12 +100,12 @@ const Certificaciones = () => {
             </ul>
 
             {certifications.length > FEATURED_COUNT && (
-                <div className="text-center mt-8">
+                <div className="mt-8">
                     <button
                         type="button"
                         onClick={() => setExpanded(!expanded)}
                         aria-expanded={expanded}
-                        className="inline-flex items-center gap-2 border border-line-strong hover:border-accent-soft hover:text-accent-soft text-white px-5 py-2.5 rounded-lg transition-colors"
+                        className="inline-flex items-center gap-2 border border-line-strong hover:border-accent-soft hover:text-accent-soft text-paper px-5 py-2.5 rounded-lg transition-colors active:scale-[0.98]"
                     >
                         {expanded
                             ? t.certificaciones.showLess
@@ -124,7 +124,7 @@ const Certificaciones = () => {
                     role="dialog"
                     aria-modal="true"
                     aria-label={selected.name}
-                    className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80"
+                    className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-canvas/80"
                     onClick={closeDialog}
                 >
                     <div
@@ -136,7 +136,7 @@ const Certificaciones = () => {
                             type="button"
                             onClick={() => setSelected(null)}
                             aria-label={t.certificaciones.close}
-                            className="absolute top-3 right-3 z-10 p-2 rounded-full bg-canvas/80 text-white hover:text-accent-soft"
+                            className="absolute top-3 right-3 z-10 p-2 rounded-full bg-canvas/80 text-paper hover:text-accent-soft"
                         >
                             <X size={20} />
                         </button>

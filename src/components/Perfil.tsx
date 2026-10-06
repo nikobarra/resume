@@ -17,7 +17,7 @@ const Perfil = () => {
             <div className="grid md:grid-cols-3 gap-8">
                 {/* Perfil Profesional */}
                 <div className="md:col-span-2">
-                    <h2 className="text-3xl font-bold text-white mb-6 ">
+                    <h2 className="text-3xl font-bold text-paper mb-6 ">
                         {t.perfil.title}
                     </h2>
                     <p className="text-lg text-soft leading-relaxed">
@@ -27,7 +27,7 @@ const Perfil = () => {
 
                 {/* Disponibilidad */}
                 <div className="border border-raised bg-surface p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <h3 className="text-xl font-semibold text-paper mb-4 flex items-center gap-2">
                         <Clock size={20} className="text-accent" />
                         {t.common.availability}
                     </h3>

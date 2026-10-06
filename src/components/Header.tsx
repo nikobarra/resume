@@ -13,6 +13,8 @@ const Header = () => {
     const { language } = useLanguage();
 
     const info = getPersonalInfo(cvData, language);
+    // El título viene como "Rol · Foco · Situación": el rol va destacado y el resto debajo
+    const [role, ...focus] = info.title.split(" · ");
 
     const socials = [
         { label: "GitHub", href: toUrl(info.github), icon: Github },
@@ -33,25 +35,44 @@ const Header = () => {
                         className="rounded-full border-4 border-accent shrink-0"
                     />
                     <div className="text-center lg:text-left">
-                        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-3 text-balance">
+                        <h1 className="text-4xl lg:text-5xl font-bold text-paper mb-3 text-balance">
                             {info.name}
                         </h1>
-                        <p className="text-lg lg:text-xl text-accent-soft mb-6 text-balance">
-                            {info.title}
+                        <p className="text-xl lg:text-2xl font-semibold text-accent-soft mb-1 text-balance">
+                            {role}
                         </p>
+                        {focus.length > 0 && (
+                            <p className="text-base lg:text-lg text-soft mb-6 text-balance">
+                                {focus.map((part, i) => (
+                                    <span key={part}>
+                                        {i > 0 && (
+                                            <span
+                                                aria-hidden="true"
+                                                className="hidden sm:inline"
+                                            >
+                                                {" · "}
+                                            </span>
+                                        )}
+                                        <span className="block sm:inline">
+                                            {part}
+                                        </span>
+                                    </span>
+                                ))}
+                            </p>
+                        )}
 
                         <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
                             <a
                                 href={CV_PATH}
                                 download
-                                className="inline-flex items-center gap-2 bg-accent hover:bg-accent-soft text-black font-semibold px-5 py-3 rounded-lg transition-colors"
+                                className="inline-flex items-center gap-2 bg-accent hover:bg-accent-soft text-canvas font-semibold px-5 py-3 rounded-lg transition-colors active:scale-[0.98]"
                             >
                                 <Download size={18} />
                                 {t.header.downloadCV}
                             </a>
                             <a
                                 href={`mailto:${info.email}`}
-                                className="inline-flex items-center gap-2 border border-line-strong hover:border-accent-soft hover:text-accent-soft text-white font-semibold px-5 py-3 rounded-lg transition-colors"
+                                className="inline-flex items-center gap-2 border border-line-strong hover:border-accent-soft hover:text-accent-soft text-paper font-semibold px-5 py-3 rounded-lg transition-colors active:scale-[0.98]"
                             >
                                 <Mail size={18} />
                                 {t.header.contact}

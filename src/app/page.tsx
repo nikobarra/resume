@@ -7,30 +7,43 @@ import Proyectos from "@/components/Proyectos";
 import Educacion from "@/components/Educacion";
 import Certificaciones from "@/components/Certificaciones";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
     return (
-        <main className="flex flex-col min-h-screen bg-canvas text-white">
+        <main className="flex flex-col min-h-[100dvh] bg-canvas text-paper">
             <Navbar />
             <div id="contenido" tabIndex={-1} className="pt-16 outline-none">
                 <Header />
                 <section id="perfil" className="py-12">
-                    <Perfil />
+                    <Reveal>
+                        <Perfil />
+                    </Reveal>
                 </section>
                 <section id="habilidades" className="py-12 bg-surface">
-                    <Habilidades />
+                    <Reveal>
+                        <Habilidades />
+                    </Reveal>
                 </section>
                 <section id="experiencia" className="py-12">
-                    <Experiencia />
+                    <Reveal>
+                        <Experiencia />
+                    </Reveal>
                 </section>
                 <section id="proyectos" className="py-12 bg-surface">
-                    <Proyectos />
+                    <Reveal>
+                        <Proyectos />
+                    </Reveal>
                 </section>
                 <section id="educacion" className="py-12">
-                    <Educacion />
+                    <Reveal>
+                        <Educacion />
+                    </Reveal>
                 </section>
                 <section id="certificaciones" className="py-12 bg-surface">
-                    <Certificaciones />
+                    <Reveal>
+                        <Certificaciones />
+                    </Reveal>
                 </section>
             </div>
             <Footer />

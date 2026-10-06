@@ -9,7 +9,7 @@
         "linkedin": "linkedin.com/in/nicolaspelecano",
         "location": "Mar del Plata, Buenos Aires"
     },
-    "professional_summary": "Developer with strong technical foundations and real production projects, seeking my first professional role in the industry. My path into development came through technical teaching — 3 years training over 200 students in Python, Django, and JavaScript gave me a deep understanding of clean code, project architecture, and best practices. I built websites for real clients, data pipelines, and my own applications. Currently pursuing a Technical Degree in Programming at UTN, with over 800 hours of certified training in Python, AI, and Data Engineering.",
+    "professional_summary": "Developer with strong technical foundations and real production projects, seeking my first professional role in the industry. My path into development came through technical teaching: 3 years training over 200 students in Python, Django, and JavaScript gave me a deep understanding of clean code, project architecture, and best practices. I built websites for real clients, data pipelines, and my own applications. Currently pursuing a Technical Degree in Programming at UTN, with over 800 hours of certified training in Python, AI, and Data Engineering.",
     "education": [
         {
             "title": "University Technical Degree in Programming",
@@ -248,7 +248,7 @@
             "contact": "Franco Di Martino +54 9 280 4390162",
             "period": "January 2022 - January 2025",
             "tasks": [
-                "Guided over 150 students through full stack projects with Python, Django, and JavaScript — reviewing code, architecture, and databases.",
+                "Guided over 150 students through full stack projects with Python, Django, and JavaScript, reviewing code, architecture, and databases.",
                 "Supported final projects applying clean code best practices, Git, and PostgreSQL modeling.",
                 "Average rating of 4.8/5 over 3 consecutive years."
             ]

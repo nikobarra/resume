@@ -9,7 +9,7 @@
         "linkedin": "linkedin.com/in/nicolaspelecano",
         "ubicacion": "Mar del Plata, Buenos Aires"
     },
-    "perfil_profesional": "Desarrollador con sólidos fundamentos técnicos y proyectos reales en producción, buscando mi primer rol profesional en la industria. Mi camino en el desarrollo viene de la docencia técnica — 3 años formando más de 200 estudiantes en Python, Django y JavaScript me dieron una comprensión profunda del código limpio, la arquitectura de proyectos y las buenas prácticas. Construí sitios web para clientes reales, pipelines de datos y aplicaciones propias. Actualmente cursando Tecnicatura en Programación en UTN y con más de 800 horas de formación certificada en Python, IA y Data Engineering.",
+    "perfil_profesional": "Desarrollador con sólidos fundamentos técnicos y proyectos reales en producción, buscando mi primer rol profesional en la industria. Mi camino en el desarrollo viene de la docencia técnica: 3 años formando más de 200 estudiantes en Python, Django y JavaScript me dieron una comprensión profunda del código limpio, la arquitectura de proyectos y las buenas prácticas. Construí sitios web para clientes reales, pipelines de datos y aplicaciones propias. Actualmente cursando Tecnicatura en Programación en UTN y con más de 800 horas de formación certificada en Python, IA y Data Engineering.",
     "educacion": [
         {
             "titulo": "Tecnicatura Universitaria en Programación",
@@ -248,7 +248,7 @@
             "contacto": "Franco Di Martino +54 9 280 4390162",
             "periodo": "Enero 2022 - Enero 2025",
             "tareas": [
-                "Guié a más de 150 estudiantes en proyectos full stack con Python, Django y JavaScript — revisando código, arquitectura y bases de datos.",
+                "Guié a más de 150 estudiantes en proyectos full stack con Python, Django y JavaScript, revisando código, arquitectura y bases de datos.",
                 "Acompañé proyectos finales aplicando buenas prácticas de código limpio, Git y modelado con PostgreSQL.",
                 "Calificación promedio de 4.8/5 durante 3 años consecutivos."
             ]

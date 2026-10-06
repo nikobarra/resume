@@ -1,7 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+    motion,
+    AnimatePresence,
+    useScroll,
+    useMotionValueEvent,
+} from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "../hooks/useTranslations";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -21,13 +26,9 @@ const Navbar = () => {
     const closeMenu = useCallback(() => setIsOpen(false), []);
     useDialogFocus(isOpen, menuRef, closeMenu);
 
-    // Detectar scroll para cambiar el estilo de la navbar
-    useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 50);
-        handleScroll();
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    // Cambiar el estilo de la navbar al hacer scroll (motion value, sin listener propio)
+    const { scrollY } = useScroll();
+    useMotionValueEvent(scrollY, "change", (y) => setIsScrolled(y > 50));
 
     // Detectar sección activa: la que cruza la franja superior del viewport
     useEffect(() => {
@@ -75,7 +76,7 @@ const Navbar = () => {
         <>
             <a
                 href="#contenido"
-                className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:px-4 focus:py-3 focus:rounded-lg focus:bg-accent focus:text-black focus:font-semibold"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:px-4 focus:py-3 focus:rounded-lg focus:bg-accent focus:text-canvas focus:font-semibold"
             >
                 {t.common.skipToContent}
             </a>
@@ -98,11 +99,11 @@ const Navbar = () => {
                             className="flex items-center space-x-3"
                         >
                             <div className="w-8 h-8 bg-accent rounded-full shrink-0 flex items-center justify-center">
-                                <span className="text-black font-bold text-sm">
+                                <span className="text-canvas font-bold text-sm">
                                     N
                                 </span>
                             </div>
-                            <span className="text-white font-semibold text-lg whitespace-nowrap">
+                            <span className="text-paper font-semibold text-lg whitespace-nowrap">
                                 Nicolás Barra
                             </span>
                         </motion.div>
@@ -118,7 +119,7 @@ const Navbar = () => {
                                     className={`relative px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
                                         activeSection === item.id
                                             ? "text-accent-soft"
-                                            : "text-soft hover:text-white"
+                                            : "text-soft hover:text-paper"
                                     }`}
                                 >
                                     {item.label}
@@ -165,7 +166,7 @@ const Navbar = () => {
                                         >
                                             <X
                                                 size={20}
-                                                className="text-white"
+                                                className="text-paper"
                                             />
                                         </motion.div>
                                     ) : (
@@ -178,7 +179,7 @@ const Navbar = () => {
                                         >
                                             <Menu
                                                 size={20}
-                                                className="text-white"
+                                                className="text-paper"
                                             />
                                         </motion.div>
                                     )}
@@ -204,7 +205,7 @@ const Navbar = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                            className="absolute inset-0 bg-canvas/50 backdrop-blur-sm"
                         />
 
                         {/* Menú */}
@@ -225,7 +226,7 @@ const Navbar = () => {
                         >
                             <div className="p-6">
                                 <div className="flex items-center justify-between mb-8">
-                                    <h2 className="text-xl font-bold text-white">
+                                    <h2 className="text-xl font-bold text-paper">
                                         {t.common.menu}
                                     </h2>
                                     <motion.button
@@ -235,7 +236,7 @@ const Navbar = () => {
                                         aria-label={t.certificaciones.close}
                                         className="p-3 rounded-lg bg-raised hover:bg-line transition-colors"
                                     >
-                                        <X size={20} className="text-white" />
+                                        <X size={20} className="text-paper" />
                                     </motion.button>
                                 </div>
 
@@ -254,7 +255,7 @@ const Navbar = () => {
                                             className={`w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 ${
                                                 activeSection === item.id
                                                     ? "bg-accent/20 text-accent-soft"
-                                                    : "text-soft hover:text-white hover:bg-raised"
+                                                    : "text-soft hover:text-paper hover:bg-raised"
                                             }`}
                                         >
                                             {item.label}

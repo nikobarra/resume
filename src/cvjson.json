@@ -330,32 +330,21 @@
     ],
     "proyectos": [
         {
-            "nombre": "Portfolio Personal",
-            "descripcion": "Portfolio profesional completo diseñado y desarrollado de cero, con modo bilingüe (ES/EN), sección de proyectos dinámica, certificaciones y experiencia. Desplegado en Vercel.",
+            "nombre": "DuckIA - Mi agencia",
+            "descripcion": "Sitio de mi agencia de contenido, video y web para negocios de Balcarce, Mar del Plata y Tandil. Lo diseñé y desarrollé completo: el hero reproduce el pliegue del logo en origami sincronizado con el scroll, con un sistema de diseño propio en negro y dorado. HTML, CSS y JavaScript sin frameworks ni dependencias.",
             "tecnologias": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS"
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Scroll-driven video",
+                "Responsive Design",
+                "SEO",
+                "Vercel"
             ],
-            "url_demo": "https://nicolasbarra.dev",
-            "url_repositorio": null,
-            "fecha_finalizacion": "2025",
-            "estado": "Completado",
-            "destacado": true
-        },
-        {
-            "nombre": "Tienda de Impresión 3D - niko3d",
-            "descripcion": "Catálogo online responsive con carrito de compras (Context API) e integración de pedidos por WhatsApp. Desplegado en Vercel con dominio propio.",
-            "tecnologias": [
-                "Next.js 14",
-                "TypeScript",
-                "TailwindCSS",
-                "Context API"
-            ],
-            "url_demo": "https://niko3d.vercel.app",
-            "url_repositorio": null,
-            "fecha_finalizacion": "2025",
+            "imagen": "/img/projects/duckia.jpg",
+            "url_demo": "https://www.duckia.com.ar",
+            "url_repositorio": "https://github.com/nikobarra/duckia",
+            "fecha_finalizacion": "2026",
             "estado": "Completado",
             "destacado": true
         },
@@ -379,6 +368,24 @@
             "destacado": true
         },
         {
+            "nombre": "Análisis de Intensidad Musical - Spotify",
+            "descripcion": "Pipeline de datos en Python que procesa y une 7 archivos CSV con 1.199.120 canciones: detección de duplicados y valores fuera de rango, limpieza, combinación y un índice de intensidad musical (energy 60% + loudness 40%). Resultado: la intensidad media pasó de 0,587 en los 60 a 0,732 en los 2010, y Rock es el género más intenso (0,830).",
+            "tecnologias": [
+                "Python",
+                "Pandas",
+                "NumPy",
+                "Parquet",
+                "ETL",
+                "Calidad de datos"
+            ],
+            "imagen": "/img/projects/spotify_intensidad.jpg",
+            "url_demo": null,
+            "url_repositorio": "https://github.com/nikobarra/The_Spotify_Project",
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true
+        },
+        {
             "nombre": "Extracción, Procesamiento y Almacenamiento de Datos - UTN",
             "descripcion": "Pipeline idempotente de extracción, transformación y almacenamiento de datos con The News API. Arquitectura Bronze/Silver/Gold con Delta Lake. Proyecto académico con pruebas automatizadas.",
             "tecnologias": [
@@ -395,6 +402,38 @@
             "fecha_finalizacion": "2025",
             "estado": "Completado",
             "destacado": true
+        },
+        {
+            "nombre": "Portfolio Personal",
+            "descripcion": "Portfolio profesional completo diseñado y desarrollado de cero, con modo bilingüe (ES/EN), sección de proyectos dinámica, certificaciones y experiencia. Desplegado en Vercel.",
+            "tecnologias": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS"
+            ],
+            "url_demo": "https://nicolasbarra.dev",
+            "url_repositorio": "https://github.com/nikobarra/resume",
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true,
+            "imagen": "/img/projects/portfolio.jpg"
+        },
+        {
+            "nombre": "Tienda de Impresión 3D - niko3d",
+            "descripcion": "Catálogo online responsive con carrito de compras (Context API) e integración de pedidos por WhatsApp. Desplegado en Vercel con dominio propio.",
+            "tecnologias": [
+                "Next.js 14",
+                "TypeScript",
+                "TailwindCSS",
+                "Context API"
+            ],
+            "url_demo": "https://niko3d.vercel.app",
+            "url_repositorio": "https://github.com/nikobarra/niko3d",
+            "fecha_finalizacion": "2025",
+            "estado": "Completado",
+            "destacado": true,
+            "imagen": "/img/projects/niko3d.jpg"
         },
         {
             "nombre": "Monitor de Brecha Cambiaria",

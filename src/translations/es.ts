@@ -98,6 +98,7 @@ export const es = {
         status: "Estado",
         completionDate: "Fecha de finalización",
         featured: "Destacado",
+        services: "Servicios implementados",
         demo: "Ver",
         repository: "Repositorio",
         noProjects: "No hay proyectos disponibles",

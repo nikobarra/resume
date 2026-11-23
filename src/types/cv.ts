@@ -49,6 +49,7 @@ export interface CVDataEs {
     proyectos: {
         nombre: string;
         descripcion: string;
+        servicios?: string[];
         tecnologias: string[];
         imagen?: string;
         url_demo: string | null;
@@ -121,6 +122,7 @@ export interface CVDataEn {
     projects: {
         name: string;
         description: string;
+        services?: string[];
         technologies: string[];
         image?: string;
         demo_url: string | null;

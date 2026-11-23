@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Calendar, Star, Code, Eye } from "lucide-react";
+import { Github, Calendar, Star, Code, Eye, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "../hooks/useTranslations";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -115,6 +115,27 @@ const Proyectos = () => {
                                     <Links project={primary} />
                                 </div>
                             </div>
+                            {primary.services.length > 0 && (
+                                <div className="lg:col-span-5 border-t border-line p-6 lg:p-8">
+                                    <h4 className="text-xs font-medium text-muted uppercase tracking-wide mb-4">
+                                        {t.proyectos.services}
+                                    </h4>
+                                    <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                                        {primary.services.map((service) => (
+                                            <li
+                                                key={service}
+                                                className="flex items-start gap-2 text-sm text-soft"
+                                            >
+                                                <CheckCircle
+                                                    size={16}
+                                                    className="text-accent-soft mt-0.5 shrink-0"
+                                                />
+                                                <span>{service}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
                         </article>
                     )}
 
@@ -122,7 +143,7 @@ const Proyectos = () => {
                         {others.map((project) => (
                             <article
                                 key={project.name}
-                                className="bg-surface rounded-lg border border-raised hover:border-accent transition-colors overflow-hidden flex flex-col"
+                                className="bg-surface rounded-lg border border-raised hover:border-accent transition-colors overflow-hidden flex flex-col md:last:odd:col-span-2"
                             >
                                 {project.image && (
                                     <div className="relative h-48 bg-raised">

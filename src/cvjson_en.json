@@ -330,6 +330,37 @@
     ],
     "projects": [
         {
+            "name": "Don Sticker - Online store",
+            "description": "Live e-commerce for vinyl stickers: a catalog of over 1,200 designs with search and filters, prebuilt packs, volume pricing and a cart. Built with HTML, CSS and JavaScript without frameworks, on its own Cloudflare backend.",
+            "services": [
+                "Mercado Pago payments (Checkout Pro), with signed webhooks and automatic reconciliation.",
+                "ARCA e-invoicing for every payment, with a PDF and QR code sent by email.",
+                "Correo Argentino shipping (MiCorreo API) with zone-based fallback rates.",
+                "Accounts with email or Google, email verification and password recovery.",
+                "Owner dashboard with orders, invoices, credit notes and sales analytics.",
+                "Transactional emails and weekly updates with Resend.",
+                "Backend on Cloudflare Workers with a D1 database and 273 automated tests."
+            ],
+            "technologies": [
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "Cloudflare Workers",
+                "Cloudflare D1",
+                "Mercado Pago",
+                "ARCA (WSFE)",
+                "Resend",
+                "node:test"
+            ],
+            "image": "/img/projects/donsticker.jpg",
+            "demo_url": "https://donsticker.com.ar",
+            "repository_url": "https://github.com/nikobarra/ecommerce_don_sticker",
+            "completion_date": "2026",
+            "status": "Completed",
+            "featured": true,
+            "primary": true
+        },
+        {
             "name": "DuckIA - My agency",
             "description": "Website for my content, video and web agency serving businesses in Balcarce, Mar del Plata and Tandil. I designed and built it end to end: the hero plays the logo's origami fold synced to scroll, with a custom black-and-gold design system. Plain HTML, CSS and JavaScript, no frameworks or dependencies.",
             "technologies": [
@@ -453,8 +484,7 @@
             "repository_url": "https://github.com/nikobarra/brecha_oficial_mep",
             "completion_date": "2025",
             "status": "Completed",
-            "featured": true,
-            "primary": true
+            "featured": true
         }
     ],
     "languages": [

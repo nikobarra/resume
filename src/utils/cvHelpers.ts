@@ -164,6 +164,7 @@ export const getProjects = (
         return data.map((project) => ({
             name: project.nombre,
             description: project.descripcion,
+            services: project.servicios ?? [],
             technologies: project.tecnologias,
             image: project.imagen,
             demo_url: project.url_demo,
@@ -178,6 +179,7 @@ export const getProjects = (
         return data.map((project) => ({
             name: project.name,
             description: project.description,
+            services: project.services ?? [],
             technologies: project.technologies,
             image: project.image,
             demo_url: project.demo_url,

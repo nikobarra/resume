@@ -330,6 +330,37 @@
     ],
     "proyectos": [
         {
+            "nombre": "Don Sticker - Tienda online",
+            "descripcion": "E-commerce en producción de stickers de vinilo: catálogo de más de 1.200 diseños con buscador y filtros, packs prearmados, precios por cantidad y carrito. Sitio en HTML, CSS y JavaScript sin frameworks, con servidor propio en Cloudflare.",
+            "servicios": [
+                "Pagos con Mercado Pago (Checkout Pro), con aviso firmado y conciliación automática.",
+                "Factura electrónica de ARCA por cada pago, con PDF y código QR enviados por mail.",
+                "Envíos por Correo Argentino (API MiCorreo) con tarifas por zona de respaldo.",
+                "Cuentas con mail o Google, confirmación de mail y recuperación de contraseña.",
+                "Panel del dueño con pedidos, facturas, notas de crédito y analíticas de ventas.",
+                "Mails transaccionales y novedades semanales con Resend.",
+                "Servidor en Cloudflare Workers con base D1 y 273 pruebas automáticas."
+            ],
+            "tecnologias": [
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "Cloudflare Workers",
+                "Cloudflare D1",
+                "Mercado Pago",
+                "ARCA (WSFE)",
+                "Resend",
+                "node:test"
+            ],
+            "imagen": "/img/projects/donsticker.jpg",
+            "url_demo": "https://donsticker.com.ar",
+            "url_repositorio": "https://github.com/nikobarra/ecommerce_don_sticker",
+            "fecha_finalizacion": "2026",
+            "estado": "Completado",
+            "destacado": true,
+            "principal": true
+        },
+        {
             "nombre": "DuckIA - Mi agencia",
             "descripcion": "Sitio de mi agencia de contenido, video y web para negocios de Balcarce, Mar del Plata y Tandil. Lo diseñé y desarrollé completo: el hero reproduce el pliegue del logo en origami sincronizado con el scroll, con un sistema de diseño propio en negro y dorado. HTML, CSS y JavaScript sin frameworks ni dependencias.",
             "tecnologias": [
@@ -453,8 +484,7 @@
             "url_repositorio": "https://github.com/nikobarra/brecha_oficial_mep",
             "fecha_finalizacion": "2025",
             "estado": "Completado",
-            "destacado": true,
-            "principal": true
+            "destacado": true
         }
     ],
     "idiomas": [

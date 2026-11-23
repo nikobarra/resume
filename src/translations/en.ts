@@ -98,6 +98,7 @@ export const en = {
         status: "Status",
         completionDate: "Completion date",
         featured: "Featured",
+        services: "Implemented services",
         demo: "View",
         repository: "Repository",
         noProjects: "No projects available",
